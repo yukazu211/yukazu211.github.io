@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+window.addEventListener('load', function(){
 var newnum1 = "0002"
 var newtit1 = "身延線に臨時列車が運転"
 var newnum2 = "0001"
