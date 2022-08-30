@@ -444,6 +444,10 @@ img::selection {
 
   background-color:	#CBE3FA;
 }
+.cha::selection {
+  color:#117711;
+  background-color:#FFAA33;
+}
 
 img{
 	vertical-align:top;
