@@ -1,6 +1,6 @@
 
 /* パソコン版 */
-@media screen and (max-width:9000px) {
+@media print, screen and (max-width:9000px) {
 * {
    box-sizing: border-box;
 }
