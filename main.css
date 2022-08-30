@@ -431,7 +431,10 @@ div.sp-open span:after {
 
 
 
-
+::selection {
+  color:#117711;
+  background-color:#F57615;
+}
 
 img{
 	vertical-align:top;
