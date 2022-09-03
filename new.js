@@ -13,5 +13,8 @@ document.getElementById('head').innerHTML = '<div class="side-c" id="head"> <div
 '<a href="../blog/'+newnum2+'" class="news"><div class="news"><img src="../blog/'+newnum2+ '/header.jpeg" class="newsimg"><b class="news">'+newtit2+'</b></div></a>'      +
 '<a href="../blog/'+newnum3+'" class="news"><div class="news"><img src="../blog/'+newnum3+ '/header.jpeg" class="newsimg"><b class="news">'+newtit3+'</b></div></a>'      +
 // '<a href="../blog/'+newnum4+'" class="news"><div class="news"><img src="../blog/'+newnum4+ '/header.jpeg" class="newsimg"><b class="news">'+newtit4+'</b></div></a>'      +
-  '</div>'
+  '</div>';
+ var decode = decodeURI(location.href)	  
+	  
+document.getElementById('url').innerHTML ='<a href="' + decode +'">' + decode + '</a>' + 'は、見つかりませんでした。<br>５秒後にトップページに戻ります。';
 }
