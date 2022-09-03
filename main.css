@@ -431,23 +431,7 @@ div.sp-open span:after {
 
 
 
-::selection {
-  color:#117711;
-  background-color:#FFAA33;
-}
 
-a.he::selection {
-  color:white;
-  background-color:transparent;
-}
-img::selection {
-
-  background-color:	#CBE3FA;
-}
-.cha::selection {
-  color:#117711;
-  background-color:#FFAA33;
-}
 
 img{
 	vertical-align:top;
