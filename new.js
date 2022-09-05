@@ -33,7 +33,7 @@ var hiduke=new Date();
 var month = hiduke.getMonth()+1;
 var day = hiduke.getDate();
 var today = month+"/"+day;
-if (today=="11/15"){
+if (today=="9/5"){
 var husen1 = getRandom( 1, 8 );
 var husen2 = getRandom( 1, 8 );
 var husen3 = getRandom( 1, 8 );
