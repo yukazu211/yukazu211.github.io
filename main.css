@@ -856,3 +856,11 @@ transform:translate(5.5vw,-100vh);
 
 
 
+.husenimg::selection {
+  background-color:transparent;
+  
+  
+}
+.husen{
+  pointer-events: none;
+}
