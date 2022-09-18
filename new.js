@@ -6,7 +6,7 @@ if(window.matchMedia('(prefers-color-scheme: dark)').matches == true){//OSの色
 
 
 function dark() {
-    body.style.backgroundColor="#202020";
+  body.style.backgroundColor="#202020";
   main.style.backgroundColor="#3b3b3b";
   body.style.color="white";
 litwi.innerHTML = '';
