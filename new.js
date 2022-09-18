@@ -17,7 +17,7 @@ function dark() {
 
 }
 function light() {
-    body.style.backgroundColor="#e6e6e6";
+  document.getElementById('body').style.backgroundColor="#e6e6e6";
   main.style.backgroundColor="#f0f0f0";
   body.style.color="black";
   datwi.innerHTML = "";
