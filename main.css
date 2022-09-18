@@ -3,6 +3,7 @@
 @media print, screen and (max-width:9000px) {
 * {
    box-sizing: border-box;
+
 }
   
 
@@ -71,18 +72,18 @@ width:100%;
 footer
 {
 /*     position: absolute; */
-    bottom: 0; 
   background-color:black;
   color:white;
   text-align:center;
-  width:100%;
+  width:100vw;
+
 
 
   
 }
 .icon
 {
-  width:150px;
+  width:18vh;
 border-radius:50%;
 border: 5px solid white;
 }
@@ -92,6 +93,12 @@ border: 5px solid white;
    margin-top: 10px;
   
 }
+  .yukazu{
+    margin:0;
+  }
+  .intro{
+    margin-top:0.8vh;
+  }
   .gallery{
 white-space: nowrap;
   }
@@ -145,7 +152,18 @@ padding-left:10px;
   height: 440px;
   margin-bottom:20px;
   background-color: #f0f0f0;
+  
 }
+  .side-c-d {
+  min-width:330px;
+  position: sticky;
+  top: 66px;
+  height: 440px;
+  margin-bottom:20px;
+  background-color: #3b3b3b;
+  
+}
+  
 .footer {
   margin-top: 40px;
   height: 1000px;
@@ -347,7 +365,7 @@ text-decoration: underline  ;
 .news{
   display:flex;
   background:white;
-margin-bottom
+
 }
 b.news{
   margin-top:7px;
@@ -358,9 +376,26 @@ b.news{
 a.news:hover{
 text-decoration: underline  black;
 }
-.kasen{
-  text-decoration: none;
+
+
+.news-d{
+  display:flex;
+  background:black;
+
+  
 }
+
+
+b.news-d{
+  margin-top:7px;
+ margin-left:7px;
+  color:white;
+
+}
+a.news-d:hover{
+text-decoration: underline  white;
+}
+
 
 
 
@@ -521,7 +556,9 @@ margin-right:3vw;
 }
 
 
-
+   .sss{
+     background:black;
+   }
 .husenimg3 {
 animation:hu1 3s 0.4s 4 forwards linear;
 
