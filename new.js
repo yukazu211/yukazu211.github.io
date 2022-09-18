@@ -6,10 +6,10 @@ if(window.matchMedia('(prefers-color-scheme: dark)').matches == true){//OSの色
 
 
 function dark() {
-  body.style.backgroundColor="#202020";
+  document.getElementById('body').style.backgroundColor="#202020";
   main.style.backgroundColor="#3b3b3b";
   body.style.color="white";
-litwi.innerHTML = '';
+ litwi.innerHTML = '';
   side_t.style.backgroundColor="#3b3b3b";
   head.style.backgroundColor="#3b3b3b";
 
