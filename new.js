@@ -6,7 +6,7 @@ if(window.matchMedia('(prefers-color-scheme: dark)').matches == true){//OSの色
 
 
 function dark() {
-  document.getElementById('body').style.backgroundColor = "#202020";
+  document.body.style.backgroundColor = "#202020";
   main.style.backgroundColor="#3b3b3b";
   body.style.color="white";
  litwi.innerHTML = '';
@@ -17,7 +17,7 @@ function dark() {
 
 }
 function light() {
-  document.getElementById('body').style.backgroundColor = "#e6e6e6";
+  document.body.style.backgroundColor = "#e6e6e6";
   main.style.backgroundColor="#f0f0f0";
   body.style.color="black";
   datwi.innerHTML = "";
