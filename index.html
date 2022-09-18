@@ -218,29 +218,5 @@
 
 //# sourceURL=userscript.js
 </script>
-<script>
-	if(window.matchMedia('(prefers-color-scheme: dark)').matches == true){//OSの色の取得
-	dark();
-}else{
-  light();
-}
-function dark() {
-  document.getElementById('body').style.backgroundColor="#202020";
-  main.style.backgroundColor="#3b3b3b";
-  body.style.color="white";
- litwi.innerHTML = '';
-  side_t.style.backgroundColor="#3b3b3b";
-  head.style.backgroundColor="#3b3b3b";
-}
-function light() {
-  document.getElementById('body').style.backgroundColor="#e6e6e6";
-  main.style.backgroundColor="#f0f0f0";
-  body.style.color="black";
-  datwi.innerHTML = "";
-  side_t.style.backgroundColor="#f0f0f0";
-  head.style.backgroundColor="#f0f0f0";
-}
-
-
-</script>
+<script src="./new.js"></script>
 
