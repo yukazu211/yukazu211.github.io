@@ -67,7 +67,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
-<script src="./main.js"></script><script src="./new.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
 <meta name="viewport" content="width=device-width">
 
@@ -146,42 +145,4 @@
     	© Copyright 2022 ゆうかず All rights reserved.
 </footer>
    </body></html>
-
-<script>
-
-
-(function( $ ) {
-	
-	// function sp_open_close
-	function sp_open_close() {
-		
-		if ( $( this ).hasClass( 'sp-close' ) ) {
-			
-			$( this )
-				.removeClass( 'sp-close' )
-				.addClass( 'sp-open' );
-			
-			$( '#menu' ).slideDown( 'fast' );
-			
-		} else {
-			
-			$( this )
-				.removeClass( 'sp-open' )
-				.addClass( 'sp-close' );
-			
-			$( '#menu' ).slideUp( 'fast' );
-			
-		}
-		
-	}
-	
-	
-	
-	
-	$( '#sp-icon' ).on( 'click', sp_open_close );
-	
-})( jQuery );
-
-//# sourceURL=userscript.js
-</script>
-
+<script src="./main.js"></script><script src="./new.js"></script>
