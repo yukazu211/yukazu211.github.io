@@ -1,6 +1,7 @@
 
 
 
+
 <!DOCTYPE html><html><head><!--
 
 	
@@ -68,14 +69,23 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
-<script src="./main.js"></script><script src="./new.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
 <meta name="viewport" content="width=device-width">
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@yukazu211" />
+<meta name="twitter:domain" content="yukazu211.github.io" />
+<meta name="twitter:title" content="ゆうかずのブログ" />
+<meta name="twitter:description" content="ゆうかずが作ったサイトです。" />
+<meta name="twitter:image" content="https://pbs.twimg.com/profile_banners/1425665619429527553/1656503856/1500x500" />
+	
+
 <link rel="shortcut icon" href="https://emoji-img.s3.ap-northeast-1.amazonaws.com/svg/1f375.svg">    
-<link href="./main.css" rel="stylesheet"><link href="./blog/main.css" rel="stylesheet">
+<link href="./main.css" rel="stylesheet">
+<meta name="google-site-verification" content="iA86FpwP8fxNs-4ZMBoIi5jbWjg2D40Jnn4VDT00bbs" />
 <meta charset="UTF-8" /> </head>
-<body>
-<title>送信完了</title>
+<body id="body">
+<title>ゆうかずのブログ</title>
 <header >
    <h1 class="he">
       <a href="./"class="he">ゆうかずブログ</a>
@@ -116,13 +126,17 @@
   
   
   <div class="wrapper">
-    <main class="main">
+    <main class="main" id="main">
 <h1>送信が完了しました。</h1>
 <p>返信は、数日後に返します。<br>今後ともサイト SNS等をよろしくお願いします。<br><br><a href="javascript:history.back();">一つ前のページへ戻る</a></p>
+
     </main>
     <aside class="sidebar">
-      <div class="side-t">
-        <a class="twitter-timeline" data-lang="ja" data-height="450" href="https://twitter.com/yukazu211?ref_src=twsrc%5Etfw">Twitter読み込み中</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      <div class="side-t" id="side_t">
+ <div id="litwi"><a class="twitter-timeline darktwi" data-lang="ja" data-height="450" href="https://twitter.com/yukazu211?ref_src=twsrc%5Etfw"></a></div>
+   <div id="datwi"><a class="twitter-timeline" data-lang="ja" data-height="450" data-theme="dark" href="https://twitter.com/yukazu211?ref_src=twsrc%5Etfw"></a></div>
+        
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
   </div>
       <div class="side-c" id="head">
 	      <noscript><p>ブラウザの設定でJavaScriptをオンにすると、ここに最新記事を表示できます。<br><a href="https://support.microsoft.com/ja-jp/office/javascript-%E3%82%92%E6%9C%89%E5%8A%B9%E3%81%AB%E3%81%99%E3%82%8B-7bb9ee74-6a9e-4dd1-babf-b0a1bb136361#__toc325669868" target="_blank">JavaScriptをオンにする方法</a></p></noscript>
@@ -134,40 +148,6 @@
 </footer>
    </body></html>
 
-<script>
+<script src="./main.js"></script>
+<script src="./new.js"></script>
 
-
-(function( $ ) {
-	
-	// function sp_open_close
-	function sp_open_close() {
-		
-		if ( $( this ).hasClass( 'sp-close' ) ) {
-			
-			$( this )
-				.removeClass( 'sp-close' )
-				.addClass( 'sp-open' );
-			
-			$( '#menu' ).slideDown( 'fast' );
-			
-		} else {
-			
-			$( this )
-				.removeClass( 'sp-open' )
-				.addClass( 'sp-close' );
-			
-			$( '#menu' ).slideUp( 'fast' );
-			
-		}
-		
-	}
-	
-	
-	
-	
-	$( '#sp-icon' ).on( 'click', sp_open_close );
-	
-})( jQuery );
-
-//# sourceURL=userscript.js
-</script>
