@@ -433,6 +433,7 @@ newskiji.innerHTML = '<p><span id="time1"></span>'+newtim1+newcha1+'<a href="./b
 //+ '<p><span id="time4"></span>'+newtim4+newcha4+'<a href="./blog/'+newnum4+'"><br><b class="newstitle">'+newtit4+'</b></a></p><div>'+newhon4+'</div><hr>'
 ;
 document.getElementById("fa").href="https://emoji-img.s3.ap-northeast-1.amazonaws.com/svg/1f375.svg";
+	console.log('aa');
 } else {
 
       console.log('ない');
