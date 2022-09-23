@@ -1,42 +1,3 @@
-
-if(window.matchMedia('(prefers-color-scheme: dark)').matches == true){//OSの色の取得
-	dark();
-}else{
-  light();
-}
-
-
-function dark() {
-  document.getElementById('body').style.backgroundColor="#202020";
-  main.style.backgroundColor="#3b3b3b";
-  body.style.color="white";
- litwi.innerHTML = '';
-  side_t.style.backgroundColor="#3b3b3b";
-  head.style.backgroundColor="#3b3b3b";
-
-
-
-}
-function light() {
-  document.getElementById('body').style.backgroundColor="#e6e6e6";
-  main.style.backgroundColor="#f0f0f0";
-  body.style.color="black";
-  datwi.innerHTML = "";
-  side_t.style.backgroundColor="#f0f0f0";
-  head.style.backgroundColor="#f0f0f0";
-
-}
-
-
-
-
-
-
-
-
-
-
-window.onload = function() {
 var newnum1 = "0001";
 var newtit1 = "2022年静ｼｽのNG出場まとめ";
 var newtim1 = "2022/08/14";
@@ -57,6 +18,57 @@ var newtit4 = "";
 var newtim4 = "";
 var newkos4 = "none";
 var newhon4 = "a";
+if(window.matchMedia('(prefers-color-scheme: dark)').matches == true){//OSの色の取得
+	dark();
+}else{
+  light();
+}
+
+
+function dark() {
+  document.getElementById('body').style.backgroundColor="#202020";
+  main.style.backgroundColor="#3b3b3b";
+  body.style.color="white";
+ litwi.innerHTML = '';
+  side_t.style.backgroundColor="#3b3b3b";
+  // head.style.backgroundColor="#3b3b3b";
+
+       document.getElementById('head').innerHTML = '<div class="side-c-d" id="head"> <div class="head-c"><a href="../blog" class="he header-c-d"><b>最新記事</b></a></div><div id="kiji">'+
+'<a href="../blog/'+newnum1+'" class="news-d"><div class="news-d"><img src="../blog/'+newnum1+ '/header.jpeg" class="newsimg"><b class="news-d">'+newtit1+'</b></div></a>'      +
+'<a href="../blog/'+newnum2+'" class="news-d"><div class="news-d"><img src="../blog/'+newnum2+ '/header.jpeg" class="newsimg"><b class="news-d">'+newtit2+'</b></div></a>'      +
+'<a href="../blog/'+newnum3+'" class="news-d"><div class="news-d"><img src="../blog/'+newnum3+ '/header.jpeg" class="newsimg"><b class="news-d">'+newtit3+'</b></div></a>'      +
+// '<a href="../blog/'+newnum4+'" class="news-d"><div class="news-d"><img src="../blog/'+newnum4+ '/header.jpeg" class="newsimg"><b class="news-d">'+newtit4+'</b></div></a>'      +
+  '</div>';
+     
+
+}
+function light() {
+  document.getElementById('body').style.backgroundColor="#e6e6e6";
+  main.style.backgroundColor="#f0f0f0";
+  body.style.color="black";
+  datwi.innerHTML = "";
+  side_t.style.backgroundColor="#f0f0f0";
+
+
+    document.getElementById('head').innerHTML = '<div class="side-c" id="head"> <div class="head-c"><a href="../blog" class="he header-c"><b>最新記事</b></a></div><div id="kiji">'+
+'<a href="../blog/'+newnum1+'" class="news"><div class="news"><img src="../blog/'+newnum1+ '/header.jpeg" class="newsimg"><b class="news">'+newtit1+'</b></div></a>'      +
+'<a href="../blog/'+newnum2+'" class="news"><div class="news"><img src="../blog/'+newnum2+ '/header.jpeg" class="newsimg"><b class="news">'+newtit2+'</b></div></a>'      +
+'<a href="../blog/'+newnum3+'" class="news"><div class="news"><img src="../blog/'+newnum3+ '/header.jpeg" class="newsimg"><b class="news">'+newtit3+'</b></div></a>'      +
+// '<a href="../blog/'+newnum4+'" class="news"><div class="news"><img src="../blog/'+newnum4+ '/header.jpeg" class="newsimg"><b class="news">'+newtit4+'</b></div></a>'      +
+  '</div>';
+}
+
+
+
+
+
+
+
+
+
+
+window.onload = function() {
+
 
 
 var husen = document.getElementById('husen');
@@ -256,19 +268,9 @@ change.innerHTML = '<img src="https://www.svgrepo.com/show/381214/refresh-reload
     
 
 if(window.matchMedia('(prefers-color-scheme: dark)').matches == true){//OSの色の取得
-  document.getElementById('head').innerHTML = '<div class="side-c-d" id="head"> <div class="head-c"><a href="../blog" class="he header-c-d"><b>最新記事</b></a></div><div id="kiji">'+
-'<a href="../blog/'+newnum1+'" class="news-d"><div class="news-d"><img src="../blog/'+newnum1+ '/header.jpeg" class="newsimg"><b class="news-d">'+newtit1+'</b></div></a>'      +
-'<a href="../blog/'+newnum2+'" class="news-d"><div class="news-d"><img src="../blog/'+newnum2+ '/header.jpeg" class="newsimg"><b class="news-d">'+newtit2+'</b></div></a>'      +
-'<a href="../blog/'+newnum3+'" class="news-d"><div class="news-d"><img src="../blog/'+newnum3+ '/header.jpeg" class="newsimg"><b class="news-d">'+newtit3+'</b></div></a>'      +
-// '<a href="../blog/'+newnum4+'" class="news-d"><div class="news-d"><img src="../blog/'+newnum4+ '/header.jpeg" class="newsimg"><b class="news-d">'+newtit4+'</b></div></a>'      +
-  '</div>';
+
 }else{
-  document.getElementById('head').innerHTML = '<div class="side-c" id="head"> <div class="head-c"><a href="../blog" class="he header-c"><b>最新記事</b></a></div><div id="kiji">'+
-'<a href="../blog/'+newnum1+'" class="news"><div class="news"><img src="../blog/'+newnum1+ '/header.jpeg" class="newsimg"><b class="news">'+newtit1+'</b></div></a>'      +
-'<a href="../blog/'+newnum2+'" class="news"><div class="news"><img src="../blog/'+newnum2+ '/header.jpeg" class="newsimg"><b class="news">'+newtit2+'</b></div></a>'      +
-'<a href="../blog/'+newnum3+'" class="news"><div class="news"><img src="../blog/'+newnum3+ '/header.jpeg" class="newsimg"><b class="news">'+newtit3+'</b></div></a>'      +
-// '<a href="../blog/'+newnum4+'" class="news"><div class="news"><img src="../blog/'+newnum4+ '/header.jpeg" class="newsimg"><b class="news">'+newtit4+'</b></div></a>'      +
-  '</div>';
+
 }
 
 
