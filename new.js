@@ -158,19 +158,7 @@ if (newkos4=="none"){
   
 var newskiji = document.getElementById('newskiji');
 
-if (newskiji){
-newskiji.innerHTML = '<p><span id="time1"></span>'+newtim1+newcha1+'<a href="./blog/'+newnum1+'"><br><b class="newstitle">'+newtit1+'</b></a></p><div>'+newhon1+'</div><hr>'+
-'<p><span id="time2"></span>'+newtim2+newcha2+'<a href="./blog/'+newnum2+'"><br><b class="newstitle">'+newtit2+'</b></a></p><div>'+newhon2+'</div><hr>'+
-'<p><span id="time3"></span>'+newtim3+newcha3+'<a href="./blog/'+newnum3+'"><br><b class="newstitle">'+newtit3+'</b></a></p><div>'+newhon3+'</div><hr>'
-//+ '<p><span id="time4"></span>'+newtim4+newcha4+'<a href="./blog/'+newnum4+'"><br><b class="newstitle">'+newtit4+'</b></a></p><div>'+newhon4+'</div><hr>'
-;
 
-
-} else {
-
-      console.log('ない');
-}
-  
 
     
 var time = document.getElementById('time');
@@ -281,8 +269,24 @@ if(window.matchMedia('(prefers-color-scheme: dark)').matches == true){//OSの色
 
 
 
+if (newskiji){
+  window.setTimeout(kiji, 3000);
+
+
+
+} else {
+
+      console.log('ない');
+}
+  
+
+  function kiji(){
+newskiji.innerHTML = '<p><span id="time1"></span>'+newtim1+newcha1+'<a href="./blog/'+newnum1+'"><br><b class="newstitle">'+newtit1+'</b></a></p><div>'+newhon1+'</div><hr>'+
+'<p><span id="time2"></span>'+newtim2+newcha2+'<a href="./blog/'+newnum2+'"><br><b class="newstitle">'+newtit2+'</b></a></p><div>'+newhon2+'</div><hr>'+
+'<p><span id="time3"></span>'+newtim3+newcha3+'<a href="./blog/'+newnum3+'"><br><b class="newstitle">'+newtit3+'</b></a></p><div>'+newhon3+'</div><hr>'
+//+ '<p><span id="time4"></span>'+newtim4+newcha4+'<a href="./blog/'+newnum4+'"><br><b class="newstitle">'+newtit4+'</b></a></p><div>'+newhon4+'</div><hr>'
+;}
+//# sourceURL=userscript.js
 
 
 }
-
-//# sourceURL=userscript.js
