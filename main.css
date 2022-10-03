@@ -901,3 +901,46 @@ transform:translate(5.5vw,-100vh);
 .husen{
   pointer-events: none;
 }
+.load {
+  width: 64px;
+  height: 64px;
+  margin: 10px auto;
+  border: 4px transparent solid;
+    border-top: 4px 	red solid;
+  border-radius: 50%;
+  animation: load-a 12.0s infinite linear;
+ 
+}
+
+@keyframes load-a {
+  
+  0%{
+      border-top: 4px 	red solid;
+  }
+  17%{
+     border-top: 4px 	orange solid;
+}
+    33%{
+     border-top: 4px 	yellow solid;
+}
+    50%{
+     border-top: 4px 	green solid;
+}
+    67%{
+     border-top: 4px 	aqua solid;
+}
+     83%{
+     border-top: 4px 	blue solid;
+}
+  100% { 
+       border-top: 4px purple solid;
+    transform: rotate(4320deg); 
+     
+  }
+  
+}
+
+#time1, #time2, #time3, #time4 {
+  padding-top: 100px;
+  margin-top:-100px;
+}
