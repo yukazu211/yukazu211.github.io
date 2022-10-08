@@ -280,7 +280,7 @@ if (newskiji){
 
 $(function () {
     $.ajax({
-      url: "https://yukazu211.github.io/blog/0001/", 
+      url: "https://yukazu211.github.io/blog/"+newnum1,
       cache: false,
       datatype: "html",
       success: function (html) {
@@ -290,7 +290,7 @@ $(function () {
     });
 
     $.ajax({
-      url: "https://yukazu211.github.io/blog/0003/", 
+      url: "https://yukazu211.github.io/blog/"+newnum2,
       cache: false,
       datatype: "html",
       success: function (html) {
@@ -300,7 +300,7 @@ $(function () {
     });
   
     $.ajax({
-      url: "https://yukazu211.github.io/blog/0002/", 
+      url: "https://yukazu211.github.io/blog/"+newnum3, 
       cache: false,
       datatype: "html",
       success: function (html) {
