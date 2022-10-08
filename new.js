@@ -270,9 +270,45 @@ if(window.matchMedia('(prefers-color-scheme: dark)').matches == true){//OSの色
 
 
 if (newskiji){
-  window.setTimeout(kiji, 3000);
+ newskiji.innerHTML = '<p><span id="time1"></span>'+newtim1+newcha1+'<a href="./blog/'+newnum1+'"><br><b class="newstitle">'+newtit1+'</b></a></p><div id="n1"></div><hr>'+
+'<p><span id="time2"></span>'+newtim2+newcha2+'<a href="./blog/'+newnum2+'"><br><b class="newstitle">'+newtit2+'</b></a></p><div id="n2"></div><hr>'+
+'<p><span id="time3"></span>'+newtim3+newcha3+'<a href="./blog/'+newnum3+'"><br><b class="newstitle">'+newtit3+'</b></a></p><div id="n3"></div><hr>'
+//+ '<p><span id="time4"></span>'+newtim4+newcha4+'<a href="./blog/'+newnum4+'"><br><b class="newstitle">'+newtit4+'</b></a></p><div>'+newhon4+'</div><hr>' 
 
 
+
+
+$(function () {
+    $.ajax({
+      url: "https://yukazu211.github.io/blog/0001/", 
+      cache: false,
+      datatype: "html",
+      success: function (html) {
+        var html = $(html).find("#content"); 
+        $("#n1").append(html); 
+      },
+    });
+
+    $.ajax({
+      url: "https://yukazu211.github.io/blog/0003/", 
+      cache: false,
+      datatype: "html",
+      success: function (html) {
+        var html = $(html).find("#content"); 
+        $("#n2").append(html); 
+      },
+    });
+  
+    $.ajax({
+      url: "https://yukazu211.github.io/blog/0002/", 
+      cache: false,
+      datatype: "html",
+      success: function (html) {
+        var html = $(html).find("#content"); 
+        $("#n3").append(html); 
+      },
+    });
+  });
 
 } else {
 
@@ -280,11 +316,5 @@ if (newskiji){
 }
   
 
-  function kiji(){
-newskiji.innerHTML = '<p><span id="time1"></span>'+newtim1+newcha1+'<a href="./blog/'+newnum1+'"><br><b class="newstitle">'+newtit1+'</b></a></p><div>'+newhon1+'</div><hr>'+
-'<p><span id="time2"></span>'+newtim2+newcha2+'<a href="./blog/'+newnum2+'"><br><b class="newstitle">'+newtit2+'</b></a></p><div>'+newhon2+'</div><hr>'+
-'<p><span id="time3"></span>'+newtim3+newcha3+'<a href="./blog/'+newnum3+'"><br><b class="newstitle">'+newtit3+'</b></a></p><div>'+newhon3+'</div><hr>'
-//+ '<p><span id="time4"></span>'+newtim4+newcha4+'<a href="./blog/'+newnum4+'"><br><b class="newstitle">'+newtit4+'</b></a></p><div>'+newhon4+'</div><hr>'
-;}
 
 }
