@@ -941,6 +941,6 @@ transform:translate(5.5vw,-100vh);
 }
 
 #time1, #time2, #time3, #time4 {
-  padding-top: 100px;
-  margin-top:-100px;
+  padding-top: 75px;
+  margin-top:-75px;
 }
