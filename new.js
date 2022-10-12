@@ -33,7 +33,7 @@ function dark() {
   side_t.style.backgroundColor="#3b3b3b";
   // head.style.backgroundColor="#3b3b3b";
 
-       document.getElementById('head').innerHTML = '<div class="side-c-d" id="head"> <div class="head-c"><a href="../blog" class="he header-c-d"><b>最新記事</b></a></div><div id="kiji">'+
+       document.getElementById('head').innerHTML = '<div class="side-c-d" id="head"> <a href="../blog" class="he header-c-d"><div class="head-c"><b>最新記事</b></div></a><div id="kiji">'+
 '<a href="../blog/'+newnum1+'" class="news-d"><div class="news-d"><img src="../blog/'+newnum1+ '/header.jpeg" class="newsimg"><b class="news-d">'+newtit1+'</b></div></a>'      +
 '<a href="../blog/'+newnum2+'" class="news-d"><div class="news-d"><img src="../blog/'+newnum2+ '/header.jpeg" class="newsimg"><b class="news-d">'+newtit2+'</b></div></a>'      +
 '<a href="../blog/'+newnum3+'" class="news-d"><div class="news-d"><img src="../blog/'+newnum3+ '/header.jpeg" class="newsimg"><b class="news-d">'+newtit3+'</b></div></a>'      +
