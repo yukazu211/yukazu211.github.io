@@ -50,7 +50,7 @@ function light() {
   side_t.style.backgroundColor="#f0f0f0";
 
 
-    document.getElementById('head').innerHTML = '<div class="side-c" id="head"> <div class="head-c"><a href="../blog" class="he header-c"><b>最新記事</b></a></div><div id="kiji">'+
+    document.getElementById('head').innerHTML = '<div class="side-c" id="head"><a href="../blog" class="he header-c"> <div class="head-c"><b>最新記事</b></div></a><div id="kiji">'+
 '<a href="../blog/'+newnum1+'" class="news"><div class="news"><img src="../blog/'+newnum1+ '/header.jpeg" class="newsimg"><b class="news">'+newtit1+'</b></div></a>'      +
 '<a href="../blog/'+newnum2+'" class="news"><div class="news"><img src="../blog/'+newnum2+ '/header.jpeg" class="newsimg"><b class="news">'+newtit2+'</b></div></a>'      +
 '<a href="../blog/'+newnum3+'" class="news"><div class="news"><img src="../blog/'+newnum3+ '/header.jpeg" class="newsimg"><b class="news">'+newtit3+'</b></div></a>'      +
