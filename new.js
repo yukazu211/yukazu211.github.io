@@ -1,15 +1,18 @@
-var newnum1 = "0004";
-var newtit1 = "8000番代の重連が走行する";
-var newtim1 = "2022/10/10";
-var newkos1 = "none";
-var newnum2 = "0001";
-var newtit2 = "2022年静ｼｽのNG出場まとめ";
-var newtim2 = "2022/08/14";
-var newkos2 = "2022/09/28";
+var newnum1 = "0001";
+var newtit1 = "2022年静ｼｽのNG出場まとめ";
+var newtim1 = "2022/08/14";
+var newkos1 = "2022/10/12";
+
+var newnum2 = "0004";
+var newtit2 = "8000番代の重連が走行する";
+var newtim2 = "2022/10/10";
+var newkos2 = "none";
+
 var newnum3 = "0003";
 var newtit3 = "N700系Sが搬入される";
 var newtim3 = "2022/09/03";
 var newkos3 = "none";
+
 var newnum4 = "0002";
 var newtit4 = "身延線に臨時列車が運転";
 var newtim4 = "2022/08/14";
