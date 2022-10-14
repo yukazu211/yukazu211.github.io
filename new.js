@@ -6,7 +6,7 @@ var newkos2 = "2022/10/14";
 var newnum1 = "0004";
 var newtit1 = "8000番代の重連が走行する";
 var newtim1 = "2022/10/10";
-var newkos1 = "none";
+var newkos1 = "2022/10/1";
 
 var newnum3 = "0003";
 var newtit3 = "N700系Sが搬入される";
