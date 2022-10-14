@@ -1,12 +1,12 @@
-var newnum1 = "0001";
-var newtit1 = "2022年静ｼｽのNG出場まとめ";
-var newtim1 = "2022/08/14";
-var newkos1 = "2022/10/14";
+var newnum2 = "0001";
+var newtit2 = "2022年静ｼｽのNG出場まとめ";
+var newtim2 = "2022/08/14";
+var newkos2 = "2022/10/14";
 
-var newnum2 = "0004";
-var newtit2 = "8000番代の重連が走行する";
-var newtim2 = "2022/10/10";
-var newkos2 = "none";
+var newnum1 = "0004";
+var newtit1 = "8000番代の重連が走行する";
+var newtim1 = "2022/10/10";
+var newkos1 = "none";
 
 var newnum3 = "0003";
 var newtit3 = "N700系Sが搬入される";
