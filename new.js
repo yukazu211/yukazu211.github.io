@@ -1,7 +1,7 @@
 var newnum1 = "0001";
 var newtit1 = "2022年静ｼｽのNG出場まとめ";
 var newtim1 = "2022/08/14";
-var newkos1 = "2022/10/1";
+var newkos1 = "2022/10/16";
 
 var newnum2 = "0004";
 var newtit2 = "8000番代の重連が走行する";
@@ -40,7 +40,6 @@ function dark() {
 '<a href="../blog/'+newnum4+'" class="news-d"><div class="news-d"><img src="../blog/'+newnum4+ '/header.jpeg" class="newsimg"><b class="news-d">'+newtit4+'</b></div></a>'      +
   '</div>';
      
-
 }
 function light() {
   document.getElementById('body').style.backgroundColor="#e6e6e6";
