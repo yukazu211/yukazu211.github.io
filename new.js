@@ -120,167 +120,60 @@ console.log(today);
 
      console.log('ない')
 }
+}
 
 
-var url = document.getElementById('url');
+ 
+    
 
-if (url){ //404page用
-     var decode = decodeURI(location.href);
-  
-url.innerHTML ='<a href="' + decode +'">' + decode + '</a>' + 'は、見つかりませんでした。<br>５秒後にトップページに戻ります。';
-} else {
 
-      console.log('ない');
-}
-  
-if (newkos1=="none"){
-  var newcha1 = '';
-} else {
- var newcha1 = '　<span id="change1"></span> '+ newkos1;
-}
-if (newkos2=="none"){
-  var newcha2 = '';
-} else {
- var newcha2 = '　<span id="change2"></span> '+ newkos2;
-}
-if (newkos3=="none"){
-  var newcha3 = '';
-} else {
- var newcha3 = '　<span id="change3"></span> '+ newkos3;
-}
-if (newkos4=="none"){
-  var newcha4 = '';
-} else {
- var newcha4 = '　<span id="change4"></span> '+ newkos4;
-}
+
 
   
 var newskiji = document.getElementById('newskiji');
 
 
 
-    
-var time = document.getElementById('time');
-
-if (time){
-time.innerHTML = '<img src="https://www.svgrepo.com/show/13698/time.svg" class="times"> '
-} else {
-
-      console.log('ない');
-}
-      
-var time = document.getElementById('time1');
-
-if (time){
-time.innerHTML = '<img src="https://www.svgrepo.com/show/13698/time.svg" class="times"> '
-} else {
-
-      console.log('ない');
-}
-
-      
-var time = document.getElementById('time2');
-
-if (time){
-time.innerHTML = '<img src="https://www.svgrepo.com/show/13698/time.svg" class="times"> '
-} else {
-
-      console.log('ない');
-}
-      
-var time = document.getElementById('time3');
-
-if (time){
-time.innerHTML = '<img src="https://www.svgrepo.com/show/13698/time.svg" class="times"> '
-} else {
-
-      console.log('ない');
-}
-    
-var time = document.getElementById('time4');
-
-if (time){
-time.innerHTML = '<img src="https://www.svgrepo.com/show/13698/time.svg" class="times"> '
-} else {
-
-      console.log('ない');
-}
-  
-  
-  
-var change = document.getElementById('change');
-
-if (change){
-change.innerHTML = '<img src="https://www.svgrepo.com/show/381214/refresh-reload-update-repeat-rotate.svg" class="times"> '
-} else {
-
-      console.log('ない');
-}  
-    
-var change = document.getElementById('change1');
-
-if (change){
-change.innerHTML = '<img src="https://www.svgrepo.com/show/381214/refresh-reload-update-repeat-rotate.svg" class="times"> '
-} else {
-
-      console.log('ない');
-}  
-    
-var change = document.getElementById('change2');
-
-if (change){
-change.innerHTML = '<img src="https://www.svgrepo.com/show/381214/refresh-reload-update-repeat-rotate.svg" class="times"> '
-} else {
-
-      console.log('ない');
-}  
-    
-var change = document.getElementById('change3');
-
-if (change){
-change.innerHTML = '<img src="https://www.svgrepo.com/show/381214/refresh-reload-update-repeat-rotate.svg" class="times"> '
-} else {
-
-      console.log('ない');
-}  
-    
-var change = document.getElementById('change4');
-
-if (change){
-change.innerHTML = '<img src="https://www.svgrepo.com/show/381214/refresh-reload-update-repeat-rotate.svg" class="times"> '
-} else {
-
-      console.log('ない');
-}  
-    
-
-if(window.matchMedia('(prefers-color-scheme: dark)').matches == true){//OSの色の取得
-
-}else{
-
-}
-
-
-
-  
-
-
-
-
 
 if (newskiji){
-  window.setTimeout(write, 3000);
+  window.setTimeout(write, 30);
+}
 
 
 
     
   function write(){
- newskiji.innerHTML = '<p><span id="time1"></span>'+newtim1+newcha1+'<a href="./blog/'+newnum1+'"><br><b class="newstitle">'+newtit1+'</b></a></p><div id="n1"></div><hr>'+
+    
+{
+if (newkos1=="none"){
+  var newcha1 = '';
+} else {
+ var newcha1 = '　'+ newkos1;
+}
+if (newkos2=="none"){
+  var newcha2 = '';
+} else {
+ var newcha2 = '　'+ newkos2;
+}
+if (newkos3=="none"){
+  var newcha3 = '';
+} else {
+ var newcha3 = '　'+ newkos3;
+}
+if (newkos4=="none"){
+  var newcha4 = '';
+} else {
+ var newcha4 = '　'+ newkos4;
+}
+}//日付
+    
+ newskiji.innerHTML = 
+'<p><span id="time1"></span>'+newtim1+newcha1+'<a href="./blog/'+newnum1+'"><br><b class="newstitle">'+newtit1+'</b></a></p><div id="n1"></div><hr>'+
 '<p><span id="time2"></span>'+newtim2+newcha2+'<a href="./blog/'+newnum2+'"><br><b class="newstitle">'+newtit2+'</b></a></p><div id="n2"></div><hr>'+
-'<p><span id="time3"></span>'+newtim3+newcha3+'<a href="./blog/'+newnum3+'"><br><b class="newstitle">'+newtit3+'</b></a></p><div id="n3"></div><hr>'
-+ '<p><span id="time4"></span>'+newtim4+newcha4+'<a href="./blog/'+newnum4+'"><br><b class="newstitle">'+newtit4+'</b></a></p><div id="n4"></div>';
+'<p><span id="time3"></span>'+newtim3+newcha3+'<a href="./blog/'+newnum3+'"><br><b class="newstitle">'+newtit3+'</b></a></p><div id="n3"></div><hr>'+
+'<p><span id="time4"></span>'+newtim4+newcha4+'<a href="./blog/'+newnum4+'"><br><b class="newstitle">'+newtit4+'</b></a></p><div id="n4"></div>';
 
-
+{  
     $.ajax({
       url: "https://yukazu211.github.io/blog/"+newnum1,
       cache: false,
@@ -320,17 +213,11 @@ if (newskiji){
         $("#n4").append(html); 
       },
     });
-
+}//ajax本文
 
   }
 
 
-} else {
 
-      console.log('ない');
-}
   
-
-
-}
 
