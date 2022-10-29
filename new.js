@@ -136,7 +136,7 @@ var newskiji = document.getElementById('newskiji');
 
 
 if (newskiji){
-  window.setTimeout(write, 30);
+  window.setTimeout(write, 3000);
 }
 
 
