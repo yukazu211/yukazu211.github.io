@@ -56,7 +56,7 @@ function light() {
 '<a href="../blog/'+newnum4+'" class="news"><div class="news"><img src="../blog/'+newnum4+ '/header.jpeg" class="newsimg"><b class="news">'+newtit4+'</b></div></a>'      +
   '</div>';
 }
-
+var now = new Date();var year = now.getFullYear();if(year=='2022'){document.querySelector('footer').textContent = '© Copyright 2022 ゆうかず All rights reserved.';}else{document.querySelector('footer').textContent = '© Copyright 2022-'+year+' ゆうかず All rights reserved.';}
 
 
 
