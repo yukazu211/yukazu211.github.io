@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html><html><head><!--
 	
                                                                                                                                                                                                `   ``
@@ -131,7 +132,23 @@
     <main class="main" id="main">
      <img src="./404.jpeg" style=" width:100%">
 <h1>(Not found)</h1>
-  <p id="url" style="word-break: break-all;"><script>var url = document.getElementById('url');var decode = decodeURI(location.href);url.innerHTML ='<a href="' + decode +'">' + decode + '</a>' + 'は移動されたか、削除された可能性があります。<br>入力された URL が正しいかご確認ください。<br><br>問題等がございましたらこちらの<a href="./send">フォーム</a>にお送りください。';</script></p>
+  <p id="url">
+    <script>
+    
+
+lang();
+function lang(){
+var url = document.getElementById('url');
+var decode = decodeURI(location.href);
+var lang = window.navigator.language;
+if(lang=='ja'){
+url.innerHTML ='<a href="' + decode +'" style="word-break: break-all;">' + decode + '</a>' + 'は移動されたか、削除された可能性があります。<br>入力された URL が正しいかご確認ください。<br><br>問題等がございましたらこちらの<a href="./send">フォーム</a>にお送りください。'; 
+}else{
+url.innerHTML ='<a href="' + decode +'" style="word-break: break-all;">' + decode + '</a>' + ' may have been moved or deleted.<br>Please check that the URL you entered is correct.<br><br>If you have any problems, please send to this <a href="./send">form</a>.';
+}
+}
+    </script>
+      </p>
     </main>
     <aside class="sidebar">
       <div class="side-t" id="side_t">
