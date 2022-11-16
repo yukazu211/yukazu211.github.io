@@ -9,7 +9,7 @@ var newtim2 = "2022/10/10";
 var newkos2 = "2022/10/1";
 
 var newnum3 = "0003";
-var newtit3 = "N700系Sが搬入される";
+var newtit3 = "N700S系が搬入される";
 var newtim3 = "2022/09/03";
 var newkos3 = "none";
 
