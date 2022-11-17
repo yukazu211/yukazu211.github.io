@@ -18,6 +18,27 @@ var newtit4 = "身延線に臨時列車が運転";
 var newtim4 = "2022/08/14";
 var newkos4 = "none";
 
+
+
+
+function chahref(plus){
+var href = document.querySelectorAll('a');
+for(var i in href){
+	if (href.hasOwnProperty(i)) {
+    var href1 = href[i];
+    var hrefcut = href1.href.substr( 0, 28 );
+    if(hrefcut=='https://yukazu211.github.io/'){
+  var enhref = href1.href+plus;
+     href1.href = enhref;
+    }
+  } 
+}
+}
+
+
+
+
+
 if(window.matchMedia('(prefers-color-scheme: dark)').matches == true){//OSの色の取得
 	dark();
 }else{
@@ -219,5 +240,5 @@ if (newkos4=="none"){
 
 
 
-  
+if(location.href.substr( -8 )=='en.html/'){chahref('en.html');}  
 
