@@ -240,5 +240,5 @@ if (newkos4=="none"){
 
 
 
-if(location.href.substr( -8 )=='en.html/'){chahref('en.html');}  
+if(location.href.substr( -7 )=='en.html'){chahref('en.html');}  
 
