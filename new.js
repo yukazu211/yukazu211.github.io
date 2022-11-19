@@ -331,7 +331,7 @@ if (newkos4=="none"){
   }
 
 
-if(location.href.substr( -7 )=='en.html'){chahref('en.html');en();} 
+if(location.href.substr( -7 )=='en.html'){en();} 
 
 function en(){
 
