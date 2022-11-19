@@ -290,45 +290,45 @@ if (newkos4=="none"){
 '<p><span id="time4"></span>'+newtim4+newcha4+'<a href="./blog/'+newnum4+'"><br><b class="newstitle">'+engtit4+'</b></a></p><div id="n4"></div>';
 
 {  
-//     $.ajax({
-//       url: "https://yukazu211.github.io/blog/"+newnum1+"/en.html",
-//       cache: false,
-//       datatype: "html",
-//       success: function (html) {
-//         var html = $(html).find("#content"); 
-//         $("#n1").append(html); 
-//       },
-//     });
+    $.ajax({
+      url: "https://yukazu211.github.io/blog/"+newnum1+"/en.html",
+      cache: false,
+      datatype: "html",
+      success: function (html) {
+        var html = $(html).find("#content"); 
+        $("#n1").append(html); 
+      },
+    });
 
-//     $.ajax({
-//       url: "https://yukazu211.github.io/blog/"+newnum2+"/en.html",
-//       cache: false,
-//       datatype: "html",
-//       success: function (html) {
-//         var html = $(html).find("#content"); 
-//         $("#n2").append(html); 
-//       },
-//     });
+    $.ajax({
+      url: "https://yukazu211.github.io/blog/"+newnum2+"/en.html",
+      cache: false,
+      datatype: "html",
+      success: function (html) {
+        var html = $(html).find("#content"); 
+        $("#n2").append(html); 
+      },
+    });
   
-//     $.ajax({
-//       url: "https://yukazu211.github.io/blog/"+newnum3+"/en.html", 
-//       cache: false,
-//       datatype: "html",
-//       success: function (html) {
-//         var html = $(html).find("#content"); 
-//         $("#n3").append(html); 
-//       },
+    $.ajax({
+      url: "https://yukazu211.github.io/blog/"+newnum3+"/en.html", 
+      cache: false,
+      datatype: "html",
+      success: function (html) {
+        var html = $(html).find("#content"); 
+        $("#n3").append(html); 
+      },
       
-//     });
-//       $.ajax({
-//       url: "https://yukazu211.github.io/blog/"+newnum4+"/en.html", 
-//       cache: false,
-//       datatype: "html",
-//       success: function (html) {
-//         var html = $(html).find("#content"); 
-//         $("#n4").append(html); 
-//       },
-//     });
+    });
+      $.ajax({
+      url: "https://yukazu211.github.io/blog/"+newnum4+"/en.html", 
+      cache: false,
+      datatype: "html",
+      success: function (html) {
+        var html = $(html).find("#content"); 
+        $("#n4").append(html); 
+      },
+    });
 }//ajax本文
 
   }
