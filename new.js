@@ -1,20 +1,24 @@
 var newnum1 = "0001";
 var newtit1 = "2022年静ｼｽのNG出場まとめ";
+var engtit1 = "Summary of Shizusys trains that left the Nagoya Plant";
 var newtim1 = "2022/08/14";
 var newkos1 = "2022/11/18";
 
 var newnum2 = "0004";
 var newtit2 = "8000番代の重連が走行する";
+var engtit2 = "Series 313-8000s coupled with each other run";
 var newtim2 = "2022/10/10";
 var newkos2 = "2022/10/1";
 
 var newnum3 = "0003";
 var newtit3 = "N700S系が搬入される";
+var engtit3 = "N700S Series is brought in";
 var newtim3 = "2022/09/03";
 var newkos3 = "none";
 
 var newnum4 = "0002";
 var newtit4 = "身延線に臨時列車が運転";
+var engtit4 = "Special trains run on the Minobu Line";
 var newtim4 = "2022/08/14";
 var newkos4 = "none";
 
@@ -238,6 +242,93 @@ if (newkos4=="none"){
 
   }
 
+
+var newskiji = document.getElementById('enkiji');
+
+
+
+
+if (newskiji){
+  window.setTimeout(write, 3000);
+}
+
+
+
+    
+  function write(){
+    
+{
+if (newkos1=="none"){
+  var newcha1 = '';
+} else {
+ var newcha1 = '　'+ newkos1;
+}
+if (newkos2=="none"){
+  var newcha2 = '';
+} else {
+ var newcha2 = '　'+ newkos2;
+}
+if (newkos3=="none"){
+  var newcha3 = '';
+} else {
+ var newcha3 = '　'+ newkos3;
+}
+if (newkos4=="none"){
+  var newcha4 = '';
+} else {
+ var newcha4 = '　'+ newkos4;
+}
+}//日付
+    
+ newskiji.innerHTML = 
+'<p><span id="time1"></span>'+newtim1+newcha1+'<a href="./blog/'+newnum1+'"><br><b class="newstitle">'+engtit1+'</b></a></p><div id="n1"></div><hr>'+
+'<p><span id="time2"></span>'+newtim2+newcha2+'<a href="./blog/'+newnum2+'"><br><b class="newstitle">'+engtit2+'</b></a></p><div id="n2"></div><hr>'+
+'<p><span id="time3"></span>'+newtim3+newcha3+'<a href="./blog/'+newnum3+'"><br><b class="newstitle">'+engtit3+'</b></a></p><div id="n3"></div><hr>'+
+'<p><span id="time4"></span>'+newtim4+newcha4+'<a href="./blog/'+newnum4+'"><br><b class="newstitle">'+engtit4+'</b></a></p><div id="n4"></div>';
+
+{  
+    $.ajax({
+      url: "https://yukazu211.github.io/blog/"+newnum1+"/en.html",
+      cache: false,
+      datatype: "html",
+      success: function (html) {
+        var html = $(html).find("#content"); 
+        $("#n1").append(html); 
+      },
+    });
+
+    $.ajax({
+      url: "https://yukazu211.github.io/blog/"+newnum2+"/en.html",
+      cache: false,
+      datatype: "html",
+      success: function (html) {
+        var html = $(html).find("#content"); 
+        $("#n2").append(html); 
+      },
+    });
+  
+    $.ajax({
+      url: "https://yukazu211.github.io/blog/"+newnum3+"/en.html", 
+      cache: false,
+      datatype: "html",
+      success: function (html) {
+        var html = $(html).find("#content"); 
+        $("#n3").append(html); 
+      },
+      
+    });
+      $.ajax({
+      url: "https://yukazu211.github.io/blog/"+newnum4+"/en.html", 
+      cache: false,
+      datatype: "html",
+      success: function (html) {
+        var html = $(html).find("#content"); 
+        $("#n4").append(html); 
+      },
+    });
+}//ajax本文
+
+  }
 
 
 if(location.href.substr( -7 )=='en.html'){chahref('en.html');}  
