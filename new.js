@@ -382,7 +382,7 @@ $.ajax({
     url: loca,
     success: function(data) {
        var t = data.match(/<title>(.*)<\/title>/);
-      $("title").html(t); 
+      $("title").html(t[1]); 
     }
 });
 }
