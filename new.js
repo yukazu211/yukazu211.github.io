@@ -197,8 +197,7 @@ if (newkos4=="none"){
 }
 }//日付
     
- newskiji.innerHTML = 
-'<p><span id="time1"></span>'+newtim1+newcha1+'<a href="./blog/'+newnum1+'"><br><b class="newstitle">'+newtit1+'</b></a></p><div id="n1"></div><hr>'+
+ newskiji.innerHTML = '<p><span id="time1"></span>'+newtim1+newcha1+'<a href="./blog/'+newnum1+'"><br><b class="newstitle">'+newtit1+'</b></a></p><div id="n1"></div><hr>'+
 '<p><span id="time2"></span>'+newtim2+newcha2+'<a href="./blog/'+newnum2+'"><br><b class="newstitle">'+newtit2+'</b></a></p><div id="n2"></div><hr>'+
 '<p><span id="time3"></span>'+newtim3+newcha3+'<a href="./blog/'+newnum3+'"><br><b class="newstitle">'+newtit3+'</b></a></p><div id="n3"></div><hr>'+
 '<p><span id="time4"></span>'+newtim4+newcha4+'<a href="./blog/'+newnum4+'"><br><b class="newstitle">'+newtit4+'</b></a></p><div id="n4"></div>';
