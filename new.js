@@ -247,7 +247,7 @@ if (newkos4=="none"){
   }
 
 
-var newskiji = document.getElemtentById('enkiji');
+var enkiji = document.getElementById('enkiji');
 
 //英語
 
