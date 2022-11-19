@@ -361,8 +361,20 @@ function en(){
 function jatoen(){
   document.querySelector('main').innerHTML ="<div class='load'></div>"
   history.pushState('', 'Yukazu Blog', location+'en.html');
+	$.ajax({
+    type: 'GET',
+    url: loca,
+    success: function(data) {
+       var t = data.match(/<title>(.*)<\/title>/);
+      $("title").html(t[1]); 
+    }
+});
   
-  var loca = location.href;
+
+document.querySelector('header').innerHTML = '<h1 class="he"> <a href="./"class="he">Yukazu Blog</a> </h1> <!--   パソコンメニュー --> <nav class="pc-nav"> <ul class="he"> <li><a href="./blog/"class="he">Blog</a></li> <li><a href="https://twitter.com/yukazu211"class="he">Twitter</a></li> <li><a href="https://www.instagram.com/yukazu211/"class="he">Instagram</a></li> <li><a href="https://www.youtube.com/channel/UCSGkQYTVv2UgqtSsq4-o-sg"class="he">YouTube</a></li> </ul> </nav> <!--   スマホ版メニュー --> <div id="sp-icon" class="sp-close"><span></span></div> <ul id="menu"> <li><a href="./blog/"class="he">Blog</a></li> <li><a href="https://twitter.com/yukazu211"class="he">Twitter</a></li> <li><a href="https://www.instagram.com/yukazu211/"class="he">Instagram</a></li> <li><a href="https://www.youtube.com/channel/UCSGkQYTVv2UgqtSsq4-o-sg"class="he">YouTube</a></li> </ul>'
+
+	
+	  var loca = location.href;
     $.ajax({
       url: loca, 
       cache: false,
@@ -372,17 +384,8 @@ function jatoen(){
         $("main").html(html); 
       },
     });
-document.querySelector('header').innerHTML = '<h1 class="he"> <a href="./"class="he">Yukazu Blog</a> </h1> <!--   パソコンメニュー --> <nav class="pc-nav"> <ul class="he"> <li><a href="./blog/"class="he">Blog</a></li> <li><a href="https://twitter.com/yukazu211"class="he">Twitter</a></li> <li><a href="https://www.instagram.com/yukazu211/"class="he">Instagram</a></li> <li><a href="https://www.youtube.com/channel/UCSGkQYTVv2UgqtSsq4-o-sg"class="he">YouTube</a></li> </ul> </nav> <!--   スマホ版メニュー --> <div id="sp-icon" class="sp-close"><span></span></div> <ul id="menu"> <li><a href="./blog/"class="he">Blog</a></li> <li><a href="https://twitter.com/yukazu211"class="he">Twitter</a></li> <li><a href="https://www.instagram.com/yukazu211/"class="he">Instagram</a></li> <li><a href="https://www.youtube.com/channel/UCSGkQYTVv2UgqtSsq4-o-sg"class="he">YouTube</a></li> </ul>'
-$(document).ajaxStop(function() {
+  $(document).ajaxStop(function() {
 en();
 });
-  
-$.ajax({
-    type: 'GET',
-    url: loca,
-    success: function(data) {
-       var t = data.match(/<title>(.*)<\/title>/);
-      $("title").html(t[1]); 
-    }
-});
+
 }
