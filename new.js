@@ -390,6 +390,9 @@ document.querySelector('header').innerHTML = '<h1 class="he"> <a href="./"class=
     });
   $(document).ajaxStop(function() {
 en();
+    if(location.href=="https://yukazu211.github.io/blog/en.html"){
+      ewrite();
+    }
 });
 
 }
@@ -444,6 +447,10 @@ document.getElementById('head').innerHTML = '<div class="side-c" id="head"><a hr
 }  
 	  
 	    noenhref();
+    
+    if(location.href=="https://yukazu211.github.io/blog/"){
+      write();
+    }
 });
 
 
@@ -462,6 +469,20 @@ for(var i in href){
   } 
 }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		document.addEventListener('keyup', keyup_ivent);
 	
