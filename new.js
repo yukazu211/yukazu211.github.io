@@ -426,8 +426,26 @@ document.querySelector('header').innerHTML = '<h1 class="he"> <a href="./"class=
       },
     });
   $(document).ajaxStop(function() {
-dl();
+
     foo();
+	  
+	if(window.matchMedia('(prefers-color-scheme: dark)').matches == true){//OSの色の取得
+	       document.getElementById('head').innerHTML = '<div class="side-c-d" id="head"> <a href="../blog/" class="he header-c-d"><div class="head-c"><b>最新記事</b></div></a><div id="kiji">'+
+'<a href="../blog/'+newnum1+'/" class="news-d"><div class="news-d"><img src="../blog/'+newnum1+ '/header.jpeg" class="newsimg"><b class="news-d">'+newtit1+'</b></div></a>'      +
+'<a href="../blog/'+newnum2+'/" class="news-d"><div class="news-d"><img src="../blog/'+newnum2+ '/header.jpeg" class="newsimg"><b class="news-d">'+newtit2+'</b></div></a>'      +
+'<a href="../blog/'+newnum3+'/" class="news-d"><div class="news-d"><img src="../blog/'+newnum3+ '/header.jpeg" class="newsimg"><b class="news-d">'+newtit3+'</b></div></a>'      +
+'<a href="../blog/'+newnum4+'/" class="news-d"><div class="news-d"><img src="../blog/'+newnum4+ '/header.jpeg" class="newsimg"><b class="news-d">'+newtit4+'</b></div></a>'      +
+  '</div>';
+}else{
+document.getElementById('head').innerHTML = '<div class="side-c" id="head"><a href="../blog/" class="he header-c"> <div class="head-c"><b>最新記事</b></div></a><div id="kiji">'+
+'<a href="../blog/'+newnum1+'/" class="news"><div class="news"><img src="../blog/'+newnum1+ '/header.jpeg" class="newsimg"><b class="news">'+newtit1+'</b></div></a>'      +
+'<a href="../blog/'+newnum2+'/" class="news"><div class="news"><img src="../blog/'+newnum2+ '/header.jpeg" class="newsimg"><b class="news">'+newtit2+'</b></div></a>'      +
+'<a href="../blog/'+newnum3+'/" class="news"><div class="news"><img src="../blog/'+newnum3+ '/header.jpeg" class="newsimg"><b class="news">'+newtit3+'</b></div></a>'      +
+'<a href="../blog/'+newnum4+'/" class="news"><div class="news"><img src="../blog/'+newnum4+ '/header.jpeg" class="newsimg"><b class="news">'+newtit4+'</b></div></a>'      +
+  '</div>';
+}  
+	  
+	  
 });
 
 }
