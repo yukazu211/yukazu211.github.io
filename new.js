@@ -1,6 +1,6 @@
 var newnum1 = "0001";
 var newtit1 = "2022年静ｼｽのNG出場まとめ";
-var engtit1 = "Summary of Shizusys trains that left the Nagoya Plant";
+var engtit1 = "Summary that left the Nagoya Plant in 2022";
 var newtim1 = "2022/08/14";
 var newkos1 = "2022/11/18";
 
@@ -331,5 +331,28 @@ if (newkos4=="none"){
   }
 
 
-if(location.href.substr( -7 )=='en.html'){chahref('en.html');}  
+if(location.href.substr( -7 )=='en.html'){chahref('en.html');en();} 
 
+function en(){
+
+  
+  if(window.matchMedia('(prefers-color-scheme: dark)').matches == true){//OSの色の取得
+       document.getElementById('head').innerHTML = '<div class="side-c-d" id="head"> <a href="../blog/" class="he header-c-d"><div class="head-c"><b>NEW ARTICLE</b></div></a><div id="kiji">'+
+'<a href="../blog/'+newnum1+'/" class="news-d"><div class="news-d"><img src="../blog/'+newnum1+ '/header.jpeg" class="newsimg"><b class="news-d">'+engtit1+'</b></div></a>'      +
+'<a href="../blog/'+newnum2+'/" class="news-d"><div class="news-d"><img src="../blog/'+newnum2+ '/header.jpeg" class="newsimg"><b class="news-d">'+engtit2+'</b></div></a>'      +
+'<a href="../blog/'+newnum3+'/" class="news-d"><div class="news-d"><img src="../blog/'+newnum3+ '/header.jpeg" class="newsimg"><b class="news-d">'+engtit3+'</b></div></a>'      +
+'<a href="../blog/'+newnum4+'/" class="news-d"><div class="news-d"><img src="../blog/'+newnum4+ '/header.jpeg" class="newsimg"><b class="news-d">'+engtit4+'</b></div></a>'      +
+  '</div>';
+}else{
+  document.getElementById('head').innerHTML = '<div class="side-c" id="head"><a href="../blog/" class="he header-c"> <div class="head-c"><b>NEW ARTICLE</b></div></a><div id="kiji">'+
+'<a href="../blog/'+newnum1+'/" class="news"><div class="news"><img src="../blog/'+newnum1+ '/header.jpeg" class="newsimg"><b class="news">'+engtit1+'</b></div></a>'      +
+'<a href="../blog/'+newnum2+'/" class="news"><div class="news"><img src="../blog/'+newnum2+ '/header.jpeg" class="newsimg"><b class="news">'+engtit2+'</b></div></a>'      +
+'<a href="../blog/'+newnum3+'/" class="news"><div class="news"><img src="../blog/'+newnum3+ '/header.jpeg" class="newsimg"><b class="news">'+engtit3+'</b></div></a>'      +
+'<a href="../blog/'+newnum4+'/" class="news"><div class="news"><img src="../blog/'+newnum4+ '/header.jpeg" class="newsimg"><b class="news">'+engtit4+'</b></div></a>'      +
+  '</div>';
+}
+  
+  chahref('en.html');
+  
+  var now = new Date();var year = now.getFullYear();if(year=='2022'){document.querySelector('footer').textContent = '© Copyright 2022 Yukazu All rights reserved.';}else{document.querySelector('footer').textContent = '© Copyright 2022-'+year+' Yukazu All rights reserved.';}
+}
