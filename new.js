@@ -162,7 +162,7 @@ console.log(today);
   
 var newskiji = document.getElementById('newskiji');
 
-
+//日本語
 
 
 if (newskiji){
@@ -247,20 +247,20 @@ if (newkos4=="none"){
   }
 
 
-var newskiji = document.getElementById('enkiji');
+var newskiji = document.getElemtentById('enkiji');
+
+//英語
 
 
-
-
-if (newskiji){
-  window.setTimeout(write, 3000);
+if (enkiji){
+  window.setTimeout(ewrite, 3000);
 }
 
 
 
     
-  function write(){
-    
+  function ewrite(){
+    console.log('aa');
 {
 if (newkos1=="none"){
   var newcha1 = '';
@@ -284,52 +284,51 @@ if (newkos4=="none"){
 }
 }//日付
     
- newskiji.innerHTML = 
-'<p><span id="time1"></span>'+newtim1+newcha1+'<a href="./blog/'+newnum1+'"><br><b class="newstitle">'+engtit1+'</b></a></p><div id="n1"></div><hr>'+
+ enkiji.innerHTML = '<p><span id="time1"></span>'+newtim1+newcha1+'<a href="./blog/'+newnum1+'"><br><b class="newstitle">'+engtit1+'</b></a></p><div id="n1"></div><hr>'+
 '<p><span id="time2"></span>'+newtim2+newcha2+'<a href="./blog/'+newnum2+'"><br><b class="newstitle">'+engtit2+'</b></a></p><div id="n2"></div><hr>'+
 '<p><span id="time3"></span>'+newtim3+newcha3+'<a href="./blog/'+newnum3+'"><br><b class="newstitle">'+engtit3+'</b></a></p><div id="n3"></div><hr>'+
 '<p><span id="time4"></span>'+newtim4+newcha4+'<a href="./blog/'+newnum4+'"><br><b class="newstitle">'+engtit4+'</b></a></p><div id="n4"></div>';
 
 {  
-    $.ajax({
-      url: "https://yukazu211.github.io/blog/"+newnum1+"/en.html",
-      cache: false,
-      datatype: "html",
-      success: function (html) {
-        var html = $(html).find("#content"); 
-        $("#n1").append(html); 
-      },
-    });
+//     $.ajax({
+//       url: "https://yukazu211.github.io/blog/"+newnum1+"/en.html",
+//       cache: false,
+//       datatype: "html",
+//       success: function (html) {
+//         var html = $(html).find("#content"); 
+//         $("#n1").append(html); 
+//       },
+//     });
 
-    $.ajax({
-      url: "https://yukazu211.github.io/blog/"+newnum2+"/en.html",
-      cache: false,
-      datatype: "html",
-      success: function (html) {
-        var html = $(html).find("#content"); 
-        $("#n2").append(html); 
-      },
-    });
+//     $.ajax({
+//       url: "https://yukazu211.github.io/blog/"+newnum2+"/en.html",
+//       cache: false,
+//       datatype: "html",
+//       success: function (html) {
+//         var html = $(html).find("#content"); 
+//         $("#n2").append(html); 
+//       },
+//     });
   
-    $.ajax({
-      url: "https://yukazu211.github.io/blog/"+newnum3+"/en.html", 
-      cache: false,
-      datatype: "html",
-      success: function (html) {
-        var html = $(html).find("#content"); 
-        $("#n3").append(html); 
-      },
+//     $.ajax({
+//       url: "https://yukazu211.github.io/blog/"+newnum3+"/en.html", 
+//       cache: false,
+//       datatype: "html",
+//       success: function (html) {
+//         var html = $(html).find("#content"); 
+//         $("#n3").append(html); 
+//       },
       
-    });
-      $.ajax({
-      url: "https://yukazu211.github.io/blog/"+newnum4+"/en.html", 
-      cache: false,
-      datatype: "html",
-      success: function (html) {
-        var html = $(html).find("#content"); 
-        $("#n4").append(html); 
-      },
-    });
+//     });
+//       $.ajax({
+//       url: "https://yukazu211.github.io/blog/"+newnum4+"/en.html", 
+//       cache: false,
+//       datatype: "html",
+//       success: function (html) {
+//         var html = $(html).find("#content"); 
+//         $("#n4").append(html); 
+//       },
+//     });
 }//ajax本文
 
   }
