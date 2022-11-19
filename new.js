@@ -362,7 +362,7 @@ function jatoen(){
   document.querySelector('main').innerHTML ="<div class='load'></div>"
   history.pushState('', 'Yukazu Blog', 'en.html');
   
-  var loca = "https://yukazu211.github.io/sent/"
+  var loca = location.href;
     $.ajax({
       url: loca + "en.html", 
       cache: false,
