@@ -377,14 +377,12 @@ $(document).ajaxStop(function() {
 en();
 });
   
-   $.ajax({
-      url: loca, 
-      cache: false,
-      datatype: "html",
-      success: function (html) {
-        var html = $(html).find("title"); 
-        $("title").html(html); 
-      },
-    });
-
+$.ajax({
+    type: 'GET',
+    url: 'http://localhost/',
+    success: function(data) {
+       var t = data.match(/<title>(.*)<\/title>/);
+      $("title").html(t); 
+    }
+});
 }
