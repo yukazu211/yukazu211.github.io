@@ -356,3 +356,22 @@ function en(){
   
   var now = new Date();var year = now.getFullYear();if(year=='2022'){document.querySelector('footer').textContent = '© Copyright 2022 Yukazu All rights reserved.';}else{document.querySelector('footer').textContent = '© Copyright 2022-'+year+' Yukazu All rights reserved.';}
 }
+
+
+function jatoen(){
+  var loca = "https://yukazu211.github.io/sent/"
+    $.ajax({
+      url: loca + "en.html", 
+      cache: false,
+      datatype: "html",
+      success: function (html) {
+        var html = $(html).find("main"); 
+        $("main").html(html); 
+      },
+    });
+document.querySelector('header').innerHTML = '<h1 class="he"> <a href="./"class="he">Yukazu Blog</a> </h1> <!--   パソコンメニュー --> <nav class="pc-nav"> <ul class="he"> <li><a href="./blog/"class="he">Blog</a></li> <li><a href="https://twitter.com/yukazu211"class="he">Twitter</a></li> <li><a href="https://www.instagram.com/yukazu211/"class="he">Instagram</a></li> <li><a href="https://www.youtube.com/channel/UCSGkQYTVv2UgqtSsq4-o-sg"class="he">YouTube</a></li> </ul> </nav> <!--   スマホ版メニュー --> <div id="sp-icon" class="sp-close"><span></span></div> <ul id="menu"> <li><a href="./blog/"class="he">Blog</a></li> <li><a href="https://twitter.com/yukazu211"class="he">Twitter</a></li> <li><a href="https://www.instagram.com/yukazu211/"class="he">Instagram</a></li> <li><a href="https://www.youtube.com/channel/UCSGkQYTVv2UgqtSsq4-o-sg"class="he">YouTube</a></li> </ul>'
+$(document).ajaxStop(function() {
+en();
+});
+
+}
