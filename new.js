@@ -473,7 +473,7 @@ for(var i in href){
   
         if(e.target.nodeName=="INPUT"){     
         }else if(e.target.nodeName=="TEXTAREA"){  
-        }else if(e.key=="r" || e.key=='1'){
+        }else if(e.key=="t" || e.key=='1'){
           tran();
         }
         
