@@ -397,7 +397,7 @@ en();
 }
 
 function entoja(){
-  var a=location.href
+  var a=location.href;
   var a1=a.replace( 'en.html', '' );
   document.querySelector('main').innerHTML ="<div class='load'></div>"
   history.pushState('', 'ゆうかずのブログ', a1);
@@ -465,3 +465,25 @@ for(var i in href){
 }
 }
 
+		document.addEventListener('keyup', keyup_ivent);
+	
+			function keyup_ivent(e) {
+      
+      
+
+  
+        if(e.target.nodeName=="INPUT"){     
+        }else if(e.target.nodeName=="TEXTAREA"){  
+        }else if(e.key=="r" || e.key=='1'){
+          tran();
+        }
+        
+  }
+function tran(){
+  var l = location.href;
+  if(l.includes('en.html')){
+ entoja();
+}else{
+ jatoen();
+}
+}
