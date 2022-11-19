@@ -376,5 +376,15 @@ document.querySelector('header').innerHTML = '<h1 class="he"> <a href="./"class=
 $(document).ajaxStop(function() {
 en();
 });
+  
+   $.ajax({
+      url: loca, 
+      cache: false,
+      datatype: "html",
+      success: function (html) {
+        var html = $(html).find("title"); 
+        $("title").html(html); 
+      },
+    });
 
 }
