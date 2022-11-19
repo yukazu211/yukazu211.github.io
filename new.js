@@ -360,11 +360,11 @@ function en(){
 
 function jatoen(){
   document.querySelector('main').innerHTML ="<div class='load'></div>"
-  history.pushState('', 'Yukazu Blog', 'en.html');
+  history.pushState('', 'Yukazu Blog', location+'en.html');
   
   var loca = location.href;
     $.ajax({
-      url: loca + "en.html", 
+      url: loca, 
       cache: false,
       datatype: "html",
       success: function (html) {
