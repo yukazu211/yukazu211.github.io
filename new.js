@@ -391,7 +391,7 @@ document.querySelector('header').innerHTML = '<h1 class="he"> <a href="./"class=
   $(document).ajaxStop(function() {
 en();
     if(location.href=="https://yukazu211.github.io/blog/en.html"){
-      ewrite();
+      window.setTimeout(ewrite, 3000);
     }
 });
 
@@ -449,7 +449,7 @@ document.getElementById('head').innerHTML = '<div class="side-c" id="head"><a hr
 	    noenhref();
     
     if(location.href=="https://yukazu211.github.io/blog/"){
-      write();
+     window.setTimeout(write, 3000);
     }
 });
 
