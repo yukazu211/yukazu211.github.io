@@ -379,7 +379,7 @@ en();
   
 $.ajax({
     type: 'GET',
-    url: 'http://localhost/',
+    url: loca,
     success: function(data) {
        var t = data.match(/<title>(.*)<\/title>/);
       $("title").html(t); 
