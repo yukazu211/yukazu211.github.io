@@ -359,6 +359,8 @@ function en(){
 
 
 function jatoen(){
+  document.querySelector('main').innerHTML ="<div class='load'></div>"
+  
   var loca = "https://yukazu211.github.io/sent/"
     $.ajax({
       url: loca + "en.html", 
