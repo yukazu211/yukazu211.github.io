@@ -445,8 +445,23 @@ document.getElementById('head').innerHTML = '<div class="side-c" id="head"><a hr
   '</div>';
 }  
 	  
-	  
+	    noenhref();
 });
 
+
+}
+function noenhref(){
+  var href = document.querySelectorAll('a');
+for(var i in href){
+	if (href.hasOwnProperty(i)) {
+    var href1 = href[i];
+    var hrefcut = href1.href.substr( 0, 28 );
+    if(hrefcut=='https://yukazu211.github.io/'){
+  var a = href1.href.replace( 'en.html', '' );
+     
+  href1.href = a;
+    }
+  } 
+}
 }
 
