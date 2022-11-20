@@ -1,4 +1,4 @@
-var newnum1 = "0001";
+evar newnum1 = "0001";
 var newtit1 = "2022年静ｼｽのNG出場まとめ";
 var engtit1 = "Summary that left the Nagoya Plant in 2022";
 var newtim1 = "2022/08/14";
@@ -405,6 +405,11 @@ en();
 function entoja(){
   var a=location.href;
   var a1=a.replace( 'en.html', '' );
+	
+	   if(location.href=="https://yukazu211.github.io/blog/"){
+       window.location.reload();
+
+    }
   document.querySelector('main').innerHTML ="<div class='load'></div><div style='text-z8align:center;''>時間が経っても表示されない場合は、リロードしてください。</div>"
   history.pushState('', 'ゆうかずのブログ', a1);
 	  var loca = location.href;	
@@ -437,10 +442,7 @@ document.querySelector('header').innerHTML = '<h1 class="he"> <a href="./"class=
 });
 	
   $(document).ajaxStop(function() {
-   if(location.href=="https://yukazu211.github.io/blog/"){
-       window.location.reload();
 
-    }
     foo();
 	  
 	if(window.matchMedia('(prefers-color-scheme: dark)').matches == true){//OSの色の取得
