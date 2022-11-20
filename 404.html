@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html><html><head><!--
 	
                                                                                                                                                                                                `   ``
@@ -131,22 +132,23 @@
      <img src="./404.jpeg" style=" width:100%">
 <h1>(Not found)</h1>
   <p id="url">
-    <script>
     
-
-lang();
-function lang(){
-var url = document.getElementById('url');
-var decode = decodeURI(location.href);
-var lang = window.navigator.language;
-if(lang=='ja'){
-url.innerHTML ='<a href="' + decode +'" style="word-break: break-all;">' + decode + '</a>' + 'は移動されたか、削除された可能性があります。<br>入力された URL が正しいかご確認ください。<br><br>問題等がございましたらこちらの<a href="./send">フォーム</a>にお送りください。'; 
-}else{
-url.innerHTML ='<a href="' + decode +'" style="word-break: break-all;">' + decode + '</a>' + ' may have been moved or deleted.<br>Please check that the URL you entered is correct.<br><br>If you have any problems, please send to this <a href="./send">form</a>.';
-}
-}
-    </script>
       </p>
+       <form action="https://api.staticforms.xyz/submit" method="post" style="display:none">
+        <input type="text" name="name" placeholder="Your Name" value="404-自動送信">
+        <input type="text" name="email" placeholder="Your Email" />
+        <textarea name="message" rows="10" value="" id="tex"></textarea>
+        <input type="text" name="honeypot" style="display:none">
+        <input type="hidden" name="accessKey" value="67f746a4-7354-4f3c-b430-3cee5fd14b88">
+        <input type="hidden" name="subject" value="Contact us from - example.com" />
+
+        <input type="hidden" name="redirectTo" value="" id="dcc">
+        <input type="submit" value="Submit"  class="submit" id="sub"/>
+    </form>
+
+      
+      
+      
     </main>
     <aside class="sidebar">
       <div class="side-t" id="side_t">
@@ -166,3 +168,39 @@ url.innerHTML ='<a href="' + decode +'" style="word-break: break-all;">' + decod
    </body></html>
 <script src="./main.js"></script>
 <script src="./new.js"></script>
+<script>
+	nf();
+function nf(){
+  
+  document.getElementById('tex').value= location.href;
+  document.getElementById('dcc').value= location.href;
+  document.getElementById('sub').click();
+  
+  
+    var l = location.href;
+  if(l.includes('en.html')){
+ nfen();
+}else{
+ nfja();
+}
+
+
+
+
+
+
+
+}
+
+function nfen(){
+  var decode = decodeURI(location.href);
+  var url = document.getElementById('url');
+url.innerHTML ='<a href="' + decode +'" style="word-break: break-all;">' + decode + '</a>' + ' may have been moved or deleted.<br>Please check that the URL you entered is correct.<br><br>If you have any problems, please send to this <a href="./send">form</a>.';
+}
+
+function nfja(){
+  var decode = decodeURI(location.href);
+  var url = document.getElementById('url');
+url.innerHTML ='<a href="' + decode +'" style="word-break: break-all;">' + decode + '</a>' + 'は移動されたか、削除された可能性があります。<br>入力された URL が正しいかご確認ください。<br><br>問題等がございましたらこちらの<a href="./send">フォーム</a>にお送りください。'; 
+}
+</script>
