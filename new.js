@@ -1,4 +1,4 @@
-evar newnum1 = "0001";
+var newnum1 = "0001";
 var newtit1 = "2022年静ｼｽのNG出場まとめ";
 var engtit1 = "Summary that left the Nagoya Plant in 2022";
 var newtim1 = "2022/08/14";
