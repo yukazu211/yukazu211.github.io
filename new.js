@@ -387,6 +387,11 @@ document.querySelector('header').innerHTML = '<h1 class="he"> <a href="./"class=
         $("main").html(html); 
       },
     });
+	
+	$( document ).ajaxError(function() {
+    window.location.reload();
+});
+	
   $(document).ajaxStop(function() {
 en();
     if(location.href=="https://yukazu211.github.io/blog/en.html"){
@@ -426,6 +431,11 @@ document.querySelector('header').innerHTML = '<h1 class="he"> <a href="./"class=
         $("main").html(html); 
       },
     });
+	
+	$( document ).ajaxError(function() {
+    window.location.reload();
+});
+	
   $(document).ajaxStop(function() {
    if(location.href=="https://yukazu211.github.io/blog/"){
        window.location.reload();
