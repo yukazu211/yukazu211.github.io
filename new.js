@@ -247,7 +247,7 @@ if (newkos4=="none"){
   }
 
 
-var enkiji = document.getElementById('enkiji');
+var newskiji = document.getElemtentById('enkiji');
 
 //英語
 
@@ -290,45 +290,45 @@ if (newkos4=="none"){
 '<p><span id="time4"></span>'+newtim4+newcha4+'<a href="./blog/'+newnum4+'"><br><b class="newstitle">'+engtit4+'</b></a></p><div id="n4"></div>';
 
 {  
-    $.ajax({
-      url: "https://yukazu211.github.io/blog/"+newnum1+"/en.html",
-      cache: false,
-      datatype: "html",
-      success: function (html) {
-        var html = $(html).find("#content"); 
-        $("#n1").append(html); 
-      },
-    });
+//     $.ajax({
+//       url: "https://yukazu211.github.io/blog/"+newnum1+"/en.html",
+//       cache: false,
+//       datatype: "html",
+//       success: function (html) {
+//         var html = $(html).find("#content"); 
+//         $("#n1").append(html); 
+//       },
+//     });
 
-    $.ajax({
-      url: "https://yukazu211.github.io/blog/"+newnum2+"/en.html",
-      cache: false,
-      datatype: "html",
-      success: function (html) {
-        var html = $(html).find("#content"); 
-        $("#n2").append(html); 
-      },
-    });
+//     $.ajax({
+//       url: "https://yukazu211.github.io/blog/"+newnum2+"/en.html",
+//       cache: false,
+//       datatype: "html",
+//       success: function (html) {
+//         var html = $(html).find("#content"); 
+//         $("#n2").append(html); 
+//       },
+//     });
   
-    $.ajax({
-      url: "https://yukazu211.github.io/blog/"+newnum3+"/en.html", 
-      cache: false,
-      datatype: "html",
-      success: function (html) {
-        var html = $(html).find("#content"); 
-        $("#n3").append(html); 
-      },
+//     $.ajax({
+//       url: "https://yukazu211.github.io/blog/"+newnum3+"/en.html", 
+//       cache: false,
+//       datatype: "html",
+//       success: function (html) {
+//         var html = $(html).find("#content"); 
+//         $("#n3").append(html); 
+//       },
       
-    });
-      $.ajax({
-      url: "https://yukazu211.github.io/blog/"+newnum4+"/en.html", 
-      cache: false,
-      datatype: "html",
-      success: function (html) {
-        var html = $(html).find("#content"); 
-        $("#n4").append(html); 
-      },
-    });
+//     });
+//       $.ajax({
+//       url: "https://yukazu211.github.io/blog/"+newnum4+"/en.html", 
+//       cache: false,
+//       datatype: "html",
+//       success: function (html) {
+//         var html = $(html).find("#content"); 
+//         $("#n4").append(html); 
+//       },
+//     });
 }//ajax本文
 
   }
@@ -362,7 +362,7 @@ function en(){
 
 
 function jatoen(){
-  document.querySelector('main').innerHTML ="<div class="load"></div><div style="text-align:center;">時間が経っても表示されない場合は、リロードしてください。</div>"
+  document.querySelector('main').innerHTML ="<div class='load'></div>"
   history.pushState('', 'Yukazu Blog', location+'en.html');
 	  var loca = location.href;	
 	$.ajax({
@@ -390,10 +390,6 @@ document.querySelector('header').innerHTML = '<h1 class="he"> <a href="./"class=
     });
   $(document).ajaxStop(function() {
 en();
-    if(location.href=="https://yukazu211.github.io/blog/en.html"){
-         window.location.reload();
-
-    }
 });
 
 }
@@ -401,7 +397,7 @@ en();
 function entoja(){
   var a=location.href;
   var a1=a.replace( 'en.html', '' );
-  document.querySelector('main').innerHTML ="<div class="load"></div><div style="text-align:center;">時間が経っても表示されない場合は、リロードしてください。</div>"
+  document.querySelector('main').innerHTML ="<div class='load'></div>"
   history.pushState('', 'ゆうかずのブログ', a1);
 	  var loca = location.href;	
 	$.ajax({
@@ -428,10 +424,7 @@ document.querySelector('header').innerHTML = '<h1 class="he"> <a href="./"class=
       },
     });
   $(document).ajaxStop(function() {
-   if(location.href=="https://yukazu211.github.io/blog/"){
-       window.location.reload();
 
-    }
     foo();
 	  
 	if(window.matchMedia('(prefers-color-scheme: dark)').matches == true){//OSの色の取得
@@ -451,8 +444,6 @@ document.getElementById('head').innerHTML = '<div class="side-c" id="head"><a hr
 }  
 	  
 	    noenhref();
-    
- 
 });
 
 
@@ -472,21 +463,7 @@ for(var i in href){
 }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener('keyup', keyup_ivent);
+		document.addEventListener('keyup', keyup_ivent);
 	
 			function keyup_ivent(e) {
       
