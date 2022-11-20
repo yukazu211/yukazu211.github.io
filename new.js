@@ -416,10 +416,7 @@ function entoja(){
 
 document.querySelector('header').innerHTML = '<h1 class="he"> <a href="./"class="he">ゆうかずブログ</a> </h1> <!--   パソコンメニュー --> <nav class="pc-nav"> <ul class="he"> <li><a href="./blog/"class="he">ブログ</a></li> <li><a href="https://twitter.com/yukazu211"class="he">Twitter</a></li> <li><a href="https://www.instagram.com/yukazu211/"class="he">Instagram</a></li> <li><a href="https://www.youtube.com/channel/UCSGkQYTVv2UgqtSsq4-o-sg"class="he">YouTube</a></li> </ul> </nav> <!--   スマホ版メニュー --> <div id="sp-icon" class="sp-close"><span></span></div> <ul id="menu"> <li><a href="./blog/"class="he">ブログ</a></li> <li><a href="https://twitter.com/yukazu211"class="he">Twitter</a></li> <li><a href="https://www.instagram.com/yukazu211/"class="he">Instagram</a></li> <li><a href="https://www.youtube.com/channel/UCSGkQYTVv2UgqtSsq4-o-sg"class="he">YouTube</a></li> </ul>'
 
-	   if(location.href=="https://yukazu211.github.io/blog/"){
-       window.location.reload();
-
-    }
+	
 
     $.ajax({
       url: loca, 
@@ -431,7 +428,10 @@ document.querySelector('header').innerHTML = '<h1 class="he"> <a href="./"class=
       },
     });
   $(document).ajaxStop(function() {
+   if(location.href=="https://yukazu211.github.io/blog/"){
+       window.location.reload();
 
+    }
     foo();
 	  
 	if(window.matchMedia('(prefers-color-scheme: dark)').matches == true){//OSの色の取得
