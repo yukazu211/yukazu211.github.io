@@ -171,24 +171,7 @@
 <script>
 nf();
 function nf(){
-  
-const sessionKey = "accesed";
-const sessionValue = true;
 
-
-if (!sessionStorage.getItem(sessionKey)) {
-document.getElementById('tex').value=  encodeURI(location.href);
-  document.getElementById('dcc').value= location.href;
-  document.getElementById('sub').click();
-  document.getElementById("modal").style.display = "block";
-  document.querySelector(".c-btn").addEventListener("click", () => {
-    document.getElementById("modal").style.display = "none";
-    //sessionStorageにデータを追加
-    sessionStorage.setItem(sessionKey, sessionValue);
-  });
-} else {
-  console.log("アクセス済み");
-}
   
 
     var l = location.href;
