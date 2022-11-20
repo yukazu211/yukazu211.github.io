@@ -169,14 +169,20 @@
 <script src="./main.js"></script>
 <script src="./new.js"></script>
 <script>
-	nf();
+nf();
 function nf(){
   
-  document.getElementById('tex').value= location.href;
+
+  
+  if (document.cookie.indexOf('visited=yes') === -1) {
+  document.cookie = 'visited=yes path=/';
+  document.getElementById('tex').value=  encodeURI(location.href);
   document.getElementById('dcc').value= location.href;
-//   document.getElementById('sub').click();
-  
-  
+  // document.getElementById('sub').click();
+} else {
+  // 2回目以降のアクセス
+  console.log('2回目以降のアクセスです');
+}
     var l = location.href;
   if(l.includes('en.html')){
  nfen();
