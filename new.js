@@ -247,7 +247,7 @@ if (newkos4=="none"){
   }
 
 
-var newskiji = document.getElemtentById('enkiji');
+var enkiji = document.getElementById('enkiji');
 
 //英語
 
@@ -362,7 +362,7 @@ function en(){
 
 
 function jatoen(){
-  document.querySelector('main').innerHTML ="<div class='load'></div>"
+  document.querySelector('main').innerHTML ="<div class='load'></div><div style='text-z8align:center;''>時間が経っても表示されない場合は、リロードしてください。</div>"
   history.pushState('', 'Yukazu Blog', location+'en.html');
 	  var loca = location.href;	
 	$.ajax({
@@ -374,7 +374,6 @@ function jatoen(){
     }
 });
   
-
 document.querySelector('header').innerHTML = '<h1 class="he"> <a href="./"class="he">Yukazu Blog</a> </h1> <!--   パソコンメニュー --> <nav class="pc-nav"> <ul class="he"> <li><a href="./blog/"class="he">Blog</a></li> <li><a href="https://twitter.com/yukazu211"class="he">Twitter</a></li> <li><a href="https://www.instagram.com/yukazu211/"class="he">Instagram</a></li> <li><a href="https://www.youtube.com/channel/UCSGkQYTVv2UgqtSsq4-o-sg"class="he">YouTube</a></li> </ul> </nav> <!--   スマホ版メニュー --> <div id="sp-icon" class="sp-close"><span></span></div> <ul id="menu"> <li><a href="./blog/"class="he">Blog</a></li> <li><a href="https://twitter.com/yukazu211"class="he">Twitter</a></li> <li><a href="https://www.instagram.com/yukazu211/"class="he">Instagram</a></li> <li><a href="https://www.youtube.com/channel/UCSGkQYTVv2UgqtSsq4-o-sg"class="he">YouTube</a></li> </ul>'
 
 	
@@ -390,6 +389,10 @@ document.querySelector('header').innerHTML = '<h1 class="he"> <a href="./"class=
     });
   $(document).ajaxStop(function() {
 en();
+    if(location.href=="https://yukazu211.github.io/blog/en.html"){
+         window.location.reload();
+
+    }
 });
 
 }
@@ -397,7 +400,7 @@ en();
 function entoja(){
   var a=location.href;
   var a1=a.replace( 'en.html', '' );
-  document.querySelector('main').innerHTML ="<div class='load'></div>"
+  document.querySelector('main').innerHTML ="<div class='load'></div><div style='text-z8align:center;''>時間が経っても表示されない場合は、リロードしてください。</div>"
   history.pushState('', 'ゆうかずのブログ', a1);
 	  var loca = location.href;	
 	$.ajax({
@@ -424,7 +427,10 @@ document.querySelector('header').innerHTML = '<h1 class="he"> <a href="./"class=
       },
     });
   $(document).ajaxStop(function() {
+   if(location.href=="https://yukazu211.github.io/blog/"){
+       window.location.reload();
 
+    }
     foo();
 	  
 	if(window.matchMedia('(prefers-color-scheme: dark)').matches == true){//OSの色の取得
@@ -444,6 +450,8 @@ document.getElementById('head').innerHTML = '<div class="side-c" id="head"><a hr
 }  
 	  
 	    noenhref();
+    
+ 
 });
 
 
@@ -463,7 +471,21 @@ for(var i in href){
 }
 }
 
-		document.addEventListener('keyup', keyup_ivent);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('keyup', keyup_ivent);
 	
 			function keyup_ivent(e) {
       
