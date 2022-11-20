@@ -362,7 +362,7 @@ function en(){
 
 
 function jatoen(){
-  document.querySelector('main').innerHTML ="<div class='load'></div>"
+  document.querySelector('main').innerHTML ="<div class="load"></div><div style="text-align:center;">時間が経っても表示されない場合は、リロードしてください。</div>"
   history.pushState('', 'Yukazu Blog', location+'en.html');
 	  var loca = location.href;	
 	$.ajax({
@@ -401,7 +401,7 @@ en();
 function entoja(){
   var a=location.href;
   var a1=a.replace( 'en.html', '' );
-  document.querySelector('main').innerHTML ="<div class='load'></div>"
+  document.querySelector('main').innerHTML ="<div class="load"></div><div style="text-align:center;">時間が経っても表示されない場合は、リロードしてください。</div>"
   history.pushState('', 'ゆうかずのブログ', a1);
 	  var loca = location.href;	
 	$.ajax({
@@ -486,7 +486,7 @@ for(var i in href){
 
 
 
-		document.addEventListener('keyup', keyup_ivent);
+document.addEventListener('keyup', keyup_ivent);
 	
 			function keyup_ivent(e) {
       
