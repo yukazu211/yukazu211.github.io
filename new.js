@@ -1,26 +1,23 @@
 var newnum1 = "0001";
 var newtit1 = "2022年静ｼｽのNG出場まとめ";
 var engtit1 = "Summary that left the Nagoya Plant in 2022";
-var newtim1 = "2022/08/14";
-var newkos1 = "2022/11/18";
+var newtim1 = ["2022/08/14", "2022/11/18"];
 
 var newnum2 = "0004";
 var newtit2 = "8000番代の重連が走行する";
 var engtit2 = "Series 313-8000s coupled with each other run";
-var newtim2 = "2022/10/10";
-var newkos2 = "2022/10/1";
+var newtim2 = ["2022/10/10", "2022/10/14"];
 
 var newnum3 = "0003";
 var newtit3 = "N700S系が搬入される";
 var engtit3 = "N700S Series is brought in";
-var newtim3 = "2022/09/03";
-var newkos3 = "none";
+var newtim3 = ["2022/09/03", ""]
 
 var newnum4 = "0002";
 var newtit4 = "身延線に臨時列車が運転";
 var engtit4 = "Special trains run on the Minobu Line";
-var newtim4 = "2022/08/14";
-var newkos4 = "none";
+var newtim4 = ["2022/08/14", ""];
+
 
 
 
@@ -52,7 +49,13 @@ if(window.matchMedia('(prefers-color-scheme: dark)').matches == true){//OSの色
 
 
 function dark() {
+    var width = window.innerWidth;
+  if(width<=731){
+  document.getElementById('body').style.backgroundColor="#3b3b3b";
+  }else{
   document.getElementById('body').style.backgroundColor="#202020";
+  }
+
   main.style.backgroundColor="#3b3b3b";
   body.style.color="white";
  litwi.innerHTML = '';
@@ -68,14 +71,19 @@ function dark() {
      
 }
 function light() {
+  var width = window.innerWidth;
+  if(width<=731){
+  document.getElementById('body').style.backgroundColor="#f0f0f0";
+  }else{
   document.getElementById('body').style.backgroundColor="#e6e6e6";
+  }
   main.style.backgroundColor="#f0f0f0";
   body.style.color="black";
   datwi.innerHTML = "";
   side_t.style.backgroundColor="#f0f0f0";
 
 
-    document.getElementById('head').innerHTML = '<div class="side-c" id="head"><a href="../blog/" class="he header-c"> <div class="head-c"><b>最新記事</b></div></a><div id="kiji">'+
+document.getElementById('head').innerHTML = '<div class="side-c" id="head"><a href="../blog/" class="he header-c"> <div class="head-c"><b>最新記事</b></div></a><div id="kiji">'+
 '<a href="../blog/'+newnum1+'/" class="news"><div class="news"><img src="../blog/'+newnum1+ '/header.jpeg" class="newsimg"><b class="news">'+newtit1+'</b></div></a>'      +
 '<a href="../blog/'+newnum2+'/" class="news"><div class="news"><img src="../blog/'+newnum2+ '/header.jpeg" class="newsimg"><b class="news">'+newtit2+'</b></div></a>'      +
 '<a href="../blog/'+newnum3+'/" class="news"><div class="news"><img src="../blog/'+newnum3+ '/header.jpeg" class="newsimg"><b class="news">'+newtit3+'</b></div></a>'      +
@@ -163,45 +171,12 @@ console.log(today);
 var newskiji = document.getElementById('newskiji');
 
 //日本語
-
-
 if (newskiji){
   window.setTimeout(write, 3000);
 }
 
-
-
-    
   function write(){
-    
-{
-if (newkos1=="none"){
-  var newcha1 = '';
-} else {
- var newcha1 = '　'+ newkos1;
-}
-if (newkos2=="none"){
-  var newcha2 = '';
-} else {
- var newcha2 = '　'+ newkos2;
-}
-if (newkos3=="none"){
-  var newcha3 = '';
-} else {
- var newcha3 = '　'+ newkos3;
-}
-if (newkos4=="none"){
-  var newcha4 = '';
-} else {
- var newcha4 = '　'+ newkos4;
-}
-}//日付
-    
- newskiji.innerHTML = '<p><span id="time1"></span>'+newtim1+newcha1+'<a href="./blog/'+newnum1+'/"><br><b class="newstitle">'+newtit1+'</b></a></p><div id="n1"></div><hr>'+
-'<p><span id="time2"></span>'+newtim2+newcha2+'<a href="./blog/'+newnum2+'/"><br><b class="newstitle">'+newtit2+'</b></a></p><div id="n2"></div><hr>'+
-'<p><span id="time3"></span>'+newtim3+newcha3+'<a href="./blog/'+newnum3+'/"><br><b class="newstitle">'+newtit3+'</b></a></p><div id="n3"></div><hr>'+
-'<p><span id="time4"></span>'+newtim4+newcha4+'<a href="./blog/'+newnum4+'/"><br><b class="newstitle">'+newtit4+'</b></a></p><div id="n4"></div>';
-
+ 
 {  
     $.ajax({
       url: "https://yukazu211.github.io/blog/"+newnum1,
@@ -243,7 +218,29 @@ if (newkos4=="none"){
       },
     });
 }//ajax本文
+{
 
+$(document).ajaxStop(function() {//ajax終わったらすぐに入れる
+document.getElementById('lo').remove();
+var b = ["https://yukazu211.github.io/blog/", "/"];
+for( var i = 1;  i < 5;  i++ ){
+document.getElementById('time'+i).textContent = window['newtim'+i][0] +'　'+ window['newtim'+i][1];
+document.getElementById('a'+i).href = b[0] + window['newnum'+i] +b[1];
+document.getElementById('ti'+i).textContent = window['newtit'+i];
+}
+});
+  
+}//日付やタイトルをいれる
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
   }
 
 
@@ -260,38 +257,10 @@ if (enkiji){
 
     
   function ewrite(){
-
-{
-if (newkos1=="none"){
-  var newcha1 = '';
-} else {
- var newcha1 = '　'+ newkos1;
-}
-if (newkos2=="none"){
-  var newcha2 = '';
-} else {
- var newcha2 = '　'+ newkos2;
-}
-if (newkos3=="none"){
-  var newcha3 = '';
-} else {
- var newcha3 = '　'+ newkos3;
-}
-if (newkos4=="none"){
-  var newcha4 = '';
-} else {
- var newcha4 = '　'+ newkos4;
-}
-}//日付
-    
- enkiji.innerHTML = '<p><span id="time1"></span>'+newtim1+newcha1+'<a href="./blog/'+newnum1+'/en.html"><br><b class="newstitle">'+engtit1+'</b></a></p><div id="n1"></div><hr>'+
-'<p><span id="time2"></span>'+newtim2+newcha2+'<a href="./blog/'+newnum2+'/en.html"><br><b class="newstitle">'+engtit2+'</b></a></p><div id="n2"></div><hr>'+
-'<p><span id="time3"></span>'+newtim3+newcha3+'<a href="./blog/'+newnum3+'/en.html"><br><b class="newstitle">'+engtit3+'</b></a></p><div id="n3"></div><hr>'+
-'<p><span id="time4"></span>'+newtim4+newcha4+'<a href="./blog/'+newnum4+'/en.html"><br><b class="newstitle">'+engtit4+'</b></a></p><div id="n4"></div>';
-
+ 
 {  
     $.ajax({
-      url: "https://yukazu211.github.io/blog/"+newnum1+"/en.html",
+      url: "https://yukazu211.github.io/blog/"+newnum1+'/en.html',
       cache: false,
       datatype: "html",
       success: function (html) {
@@ -301,7 +270,7 @@ if (newkos4=="none"){
     });
 
     $.ajax({
-      url: "https://yukazu211.github.io/blog/"+newnum2+"/en.html",
+      url: "https://yukazu211.github.io/blog/"+newnum2+'/en.html',
       cache: false,
       datatype: "html",
       success: function (html) {
@@ -311,7 +280,7 @@ if (newkos4=="none"){
     });
   
     $.ajax({
-      url: "https://yukazu211.github.io/blog/"+newnum3+"/en.html", 
+      url: "https://yukazu211.github.io/blog/"+newnum3+'/en.html', 
       cache: false,
       datatype: "html",
       success: function (html) {
@@ -321,7 +290,7 @@ if (newkos4=="none"){
       
     });
       $.ajax({
-      url: "https://yukazu211.github.io/blog/"+newnum4+"/en.html", 
+      url: "https://yukazu211.github.io/blog/"+newnum4+'/en.html', 
       cache: false,
       datatype: "html",
       success: function (html) {
@@ -330,7 +299,19 @@ if (newkos4=="none"){
       },
     });
 }//ajax本文
+{
 
+$(document).ajaxStop(function() {//ajax終わったらすぐに入れる
+document.getElementById('lo').remove();
+var b = ["https://yukazu211.github.io/blog/", "/en.html"];
+for( var i = 1;  i < 5;  i++ ){
+document.getElementById('time'+i).textContent = window['newtim'+i][0] +'　'+ window['newtim'+i][1];
+document.getElementById('a'+i).href = b[0] + window['newnum'+i] +b[1];
+document.getElementById('ti'+i).textContent = window['engtit'+i];
+}
+});
+  
+}//日付やタイトルをいれる
   }
 
 
@@ -374,7 +355,7 @@ function jatoen(){
     }
 });
   
-document.querySelector('header').innerHTML = '<h1 class="he"> <a href="./"class="he">Yukazu Blog</a> </h1> <!--   パソコンメニュー --> <nav class="pc-nav"> <ul class="he"> <li><a href="./blog/"class="he">Blog</a></li> <li><a href="https://twitter.com/yukazu211"class="he">Twitter</a></li> <li><a href="https://www.instagram.com/yukazu211/"class="he">Instagram</a></li> <li><a href="https://www.youtube.com/channel/UCSGkQYTVv2UgqtSsq4-o-sg"class="he">YouTube</a></li> </ul> </nav> <!--   スマホ版メニュー --> <div id="sp-icon" class="sp-close"><span></span></div> <ul id="menu"> <li><a href="./blog/"class="he">Blog</a></li> <li><a href="https://twitter.com/yukazu211"class="he">Twitter</a></li> <li><a href="https://www.instagram.com/yukazu211/"class="he">Instagram</a></li> <li><a href="https://www.youtube.com/channel/UCSGkQYTVv2UgqtSsq4-o-sg"class="he">YouTube</a></li> </ul>'
+document.querySelector('header').innerHTML = '<h1 class="he"> <a href="./"class="he">Yukazu Blog</a> </h1> <!--   パソコンメニュー --> <nav class="pc-nav"> <ul class="he"> <li><a href="./blog/"class="he">Blog</a></li> <li><a href="https://twitter.com/yukazu211"class="he">Twitter</a></li> <li><a href="https://www.instagram.com/yukazu211/"class="he">Instagram</a></li> <li><a href="https://www.youtube.com/channel/UCSGkQYTVv2UgqtSsq4-o-sg"class="he">YouTube</a></li> </ul> </nav> <!--   スマホ版メニュー --> <div id="sp-icon" class="sp-close"><span class="sanbon"></span></div> <ul id="menu"> <li><a href="./blog/"class="he">Blog</a></li> <li><a href="https://twitter.com/yukazu211"class="he">Twitter</a></li> <li><a href="https://www.instagram.com/yukazu211/"class="he">Instagram</a></li> <li><a href="https://www.youtube.com/channel/UCSGkQYTVv2UgqtSsq4-o-sg"class="he">YouTube</a></li> </ul>'
 
 	
 
@@ -423,7 +404,7 @@ function entoja(){
 });
   
 
-document.querySelector('header').innerHTML = '<h1 class="he"> <a href="./"class="he">ゆうかずブログ</a> </h1> <!--   パソコンメニュー --> <nav class="pc-nav"> <ul class="he"> <li><a href="./blog/"class="he">ブログ</a></li> <li><a href="https://twitter.com/yukazu211"class="he">Twitter</a></li> <li><a href="https://www.instagram.com/yukazu211/"class="he">Instagram</a></li> <li><a href="https://www.youtube.com/channel/UCSGkQYTVv2UgqtSsq4-o-sg"class="he">YouTube</a></li> </ul> </nav> <!--   スマホ版メニュー --> <div id="sp-icon" class="sp-close"><span></span></div> <ul id="menu"> <li><a href="./blog/"class="he">ブログ</a></li> <li><a href="https://twitter.com/yukazu211"class="he">Twitter</a></li> <li><a href="https://www.instagram.com/yukazu211/"class="he">Instagram</a></li> <li><a href="https://www.youtube.com/channel/UCSGkQYTVv2UgqtSsq4-o-sg"class="he">YouTube</a></li> </ul>'
+document.querySelector('header').innerHTML = '<h1 class="he"> <a href="./"class="he">ゆうかずブログ</a> </h1> <!--   パソコンメニュー --> <nav class="pc-nav"> <ul class="he"> <li><a href="./blog/"class="he">ブログ</a></li> <li><a href="https://twitter.com/yukazu211"class="he">Twitter</a></li> <li><a href="https://www.instagram.com/yukazu211/"class="he">Instagram</a></li> <li><a href="https://www.youtube.com/channel/UCSGkQYTVv2UgqtSsq4-o-sg"class="he">YouTube</a></li> </ul> </nav> <!--   スマホ版メニュー --> <div id="sp-icon" class="sp-close"><span class="sanbon"></span></div> <ul id="menu"> <li><a href="./blog/"class="he">ブログ</a></li> <li><a href="https://twitter.com/yukazu211"class="he">Twitter</a></li> <li><a href="https://www.instagram.com/yukazu211/"class="he">Instagram</a></li> <li><a href="https://www.youtube.com/channel/UCSGkQYTVv2UgqtSsq4-o-sg"class="he">YouTube</a></li> </ul>'
 
 	
 
