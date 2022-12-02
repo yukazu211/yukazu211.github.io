@@ -1,7 +1,7 @@
 var newnum1 = "0001";
 var newtit1 = "2022年静ｼｽのNG出場まとめ";
 var engtit1 = "Summary that left the Nagoya Plant in 2022";
-var newtim1 = ["2022/08/14", "2022/12/01"];
+var newtim1 = ["2022/08/14", "2022/12/02"];
 
 var newnum2 = "0004";
 var newtit2 = "8000番代の重連が走行する";
