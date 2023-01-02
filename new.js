@@ -344,7 +344,7 @@ function en(){
 
 function jatoen(){
   document.querySelector('main').innerHTML ="<div class='load'></div><div style='text-z8align:center;''>時間が経っても表示されない場合は、リロードしてください。</div>"
-  history.pushState('', 'Yukazu Blog', location+'en.html');
+  history.replaceState('', 'Yukazu Blog', location+'en.html');
 	  var loca = location.href;	
 	$.ajax({
     type: 'GET',
@@ -386,13 +386,13 @@ en();
 function entoja(){
   var a=location.href;
   var a1=a.replace( 'en.html', '' );
-	
+	history.replaceState('', 'ゆうかずのブログ', a1);
 	   if(location.href=="https://yukazu211.github.io/blog/"){
        window.location.reload();
 
     }
   document.querySelector('main').innerHTML ="<div class='load'></div><div style='text-z8align:center;''>時間が経っても表示されない場合は、リロードしてください。</div>"
-  history.pushState('', 'ゆうかずのブログ', a1);
+  
 	  var loca = location.href;	
 	$.ajax({
     type: 'GET',
