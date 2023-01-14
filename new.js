@@ -94,7 +94,7 @@ document.getElementById('head').innerHTML = '<div class="side-c" id="head"><a hr
 
 foo();
 function foo(){
-var now = new Date();var year = now.getFullYear();if(year=='2022'){document.querySelector('footer').textContent = '© Copyright 2022 ゆうかず All rights reserved.';}else{document.querySelector('footer').textContent = '© Copyright 2022-'+year+' ゆうかず All rights reserved.';}
+var now = new Date();var year = now.getFullYear();document.querySelector('footer').textContent = '© Copyright 2022-'+year+' ゆうかず All rights reserved.';
 }
 
 
