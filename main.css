@@ -1,4 +1,51 @@
 
+:root {
+	--body-text: #000;
+	--body-bg: #e6e6e6;
+	--main-bg: #f0f0f0;
+  --li-twi:block;
+  --da-twi:none;
+
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--body-text: #fff;
+		--body-bg: #3b3b3b;
+    --main-bg: #505050;
+    --da-twi:block;
+  --li-twi:none;
+	}
+}
+body{
+	color: var(--body-text);
+	background: var(--body-bg);
+      transition: color,background 2.0s;
+}
+main,.side-t,.side-c{
+	background: var(--main-bg);
+      transition:background 2.0s;
+}
+
+#datwi{
+  display:var(--da-twi);
+  transition: all 2.0s;
+  
+}
+#litwi{
+  display:var(--li-twi);
+  transition: all 2.0s;
+}
+b.news{
+  color: var(--body-text); 
+  transition: all 2.0s;
+}
+b.news:hover{
+  text-decoration: underline var(--body-text);
+}
+
+
+
 
 /* パソコン版 */
 @media print, screen and (max-width:9000px) {
@@ -13,7 +60,7 @@ body {
    margin: 0;
    padding: 0;
    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
-   background-color: #e6e6e6;
+/*    background-color: #e6e6e6; */
    letter-spacing : 0.2em;
    display: flex;
   flex-direction: column;
@@ -131,7 +178,7 @@ padding-left:20%;
   width:100%;
 padding-left:10px;
   padding-right:10px;
-  background-color: #f0f0f0;
+  
     margin-right:30px;
 }
 .sidebar {
@@ -144,7 +191,7 @@ padding-left:10px;
     min-width:330px;
   height: 450px;
   margin-bottom:40px;
-  background-color: #f0f0f0;
+  
  
 }
 
@@ -154,18 +201,10 @@ padding-left:10px;
   top: 66px;
   height: 440px;
   margin-bottom:20px;
-  background-color: #f0f0f0;
+  
   
 }
-  .side-c-d {
-  min-width:330px;
-  position: sticky;
-  top: 66px;
-  height: 440px;
-  margin-bottom:20px;
-  background-color: #3b3b3b;
   
-}
   
 .footer {
   margin-top: 40px;
@@ -345,7 +384,7 @@ margin-right:8vw;
 
 .head-c{
   height:40px;
-  background:green;
+  background:#00aa00;
   color:white;
   text-align:center;
   font-size:20px;
@@ -362,42 +401,19 @@ text-decoration: underline  ;
   width: 50%;
   height: 100px;
   object-fit: cover;
-  bottom
-  
 }
 .news{
   display:flex;
-  background:white;
-
 }
 b.news{
   margin-top:7px;
  margin-left:7px;
-  color:black;
 
-}
-a.news:hover{
-text-decoration: underline  black;
+
 }
 
 
-.news-d{
-  display:flex;
-  background:black;
 
-  
-}
-
-
-b.news-d{
-  margin-top:7px;
- margin-left:7px;
-  color:white;
-
-}
-a.news-d:hover{
-text-decoration: underline  white;
-}
 
 
 
@@ -455,7 +471,7 @@ body {
    margin: 0;
    padding: 0;
    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
-   background-color: #f0f0f0;
+
    letter-spacing : 0.2em;
    display: flex;
   flex-direction: column;
