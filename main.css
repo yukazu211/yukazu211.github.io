@@ -20,8 +20,15 @@
 body{
 	color: var(--body-text);
 	background: var(--body-bg);
-      transition: color,background 2.0s;
+      transition: all 2.0s;
+  
+  }
+@media screen and (max-width: 732px){
+    body{
+      background: var(--main-bg);
+    }
 }
+
 main,.side-t,.side-c{
 	background: var(--main-bg);
       transition:background 2.0s;
@@ -40,15 +47,19 @@ b.news{
   color: var(--body-text); 
   transition: all 2.0s;
 }
-b.news:hover{
+.news:hover{
   text-decoration: underline var(--body-text);
 }
 
-
+a.he {	
+   text-decoration: none;
+   color: #fff;
+  
+}
 
 
 /* パソコン版 */
-@media print, screen and (max-width:9000px) {
+@media print, screen and (min-width:733px) {
 * {
    box-sizing: border-box;
 
@@ -85,11 +96,7 @@ h1.he {
   {
     display: none;
   }
-a.he {	
-   text-decoration: none;
-   color: #fff;
-  
-}
+
 nav {
    margin: 0 0 0 auto;
 }
@@ -163,40 +170,34 @@ white-space: nowrap;
 
 
 .wrapper {
-padding-left:20%;
-  padding-right:30px;
-  padding-top:66px;
-
-
-  margin: 0 auto;
+  width:100vw;
   display: flex;
-  justify-content: space-between;
+  
 
 }
 .main {
 
-  width:100%;
+  width:50vw;
 padding-left:10px;
   padding-right:10px;
+  margin-right:5vw;
+  margin-left:20vw;
   
-    margin-right:30px;
 }
 .sidebar {
-  width: 27%;
   padding-top:  220px; 
-  padding-right:80px;
-
+  margin-right:10px;
 }
 .side-t {
-    min-width:330px;
-  height: 450px;
-  margin-bottom:40px;
   
- 
+  
+  margin-bottom:40px;
+  height: 450px;
+ width:25vw;
 }
 
 .side-c {
-  min-width:330px;
+  width:25vw;
   position: sticky;
   top: 66px;
   height: 440px;
@@ -207,6 +208,7 @@ padding-left:10px;
   
   
 .footer {
+  
   margin-top: 40px;
   height: 1000px;
   background-color: #f0f0f0;
@@ -399,6 +401,7 @@ text-decoration: underline  ;
 }
 .newsimg{
   width: 50%;
+  min-width:12.5vw;
   height: 100px;
   object-fit: cover;
 }
@@ -510,7 +513,7 @@ h2 {
 
 }
 .main{
-  width:110%;
+  
   padding-top:  60px;  
 padding-left:   1%;  
 padding-right:  1%; 
