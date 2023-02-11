@@ -20,14 +20,14 @@
 body{
 	color: var(--body-text);
 	background: var(--body-bg);
-      transition:background 2.0s;
-	transition:color 2.0s;
-	
+  
+  transition:background 2.0s;
   
   }
 @media screen and (max-width: 732px){
     body{
       background: var(--main-bg);
+
     }
 }
 
