@@ -83,7 +83,7 @@ header {
    position: fixed;
    top: 0;
    width: 100%;
-   background-color: #F57615;
+   background-color: #f26900;
    display: flex;
   height:60px;
 z-index:900;
@@ -455,9 +455,7 @@ b.news{
 * {
    box-sizing: border-box;
 }
-   a{
-     color:blue;
-   }
+   
    
 * {
   box-sizing: border-box;
@@ -486,7 +484,7 @@ header {
    position: fixed;
    top: 0;
    width: 100%;
-   background-color: #F57615;
+   background-color: #f26900;
    display: flex;
   height:60px;
 
@@ -883,7 +881,7 @@ img{
 
 a{
 text-decoration: none;
-  color:#1b94e0;
+  color:#0074e0;
 }
 a:hover{
   color:blue;
