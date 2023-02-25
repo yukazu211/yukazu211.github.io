@@ -146,12 +146,6 @@ footer
 border-radius:50%;
 border: 5px solid white;
 }
-.cha
-{
-  width:26px;
-   margin-top: 10px;
-  
-}
   .yukazu{
     margin:0;
   }
@@ -987,4 +981,11 @@ transform:translate(5.5vw,-100vh);
 * {
   box-sizing: border-box;
 }
+.cha
+{
+  width:26px;
+   margin-top: 10px;
+  
+}
+
  
