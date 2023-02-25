@@ -61,7 +61,7 @@ a.he {
 
 
 /* パソコン版 */
-@media print, screen and (min-width:733px) {
+@media print, screen and (min-width:732px) {
 * {
    box-sizing: border-box;
 
