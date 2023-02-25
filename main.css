@@ -444,7 +444,7 @@ b.news{
 
 
 /* スマホ版 */
- @media screen and (max-width: 732px)
+@media not screen and (min-width: px)
  {
 * {
    box-sizing: border-box;
