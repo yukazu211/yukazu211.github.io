@@ -53,6 +53,7 @@ b.news {
 a.he {
   text-decoration: none;
   color: #fff;
+  letter-spacing:1px;
 }
 
 /* パソコン版 */
